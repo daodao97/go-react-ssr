@@ -20,6 +20,23 @@
     {{ end }}
     {{ end }}
     <link rel="icon" type="image/svg+xml" href="/static/logo.svg" />
+    <style>
+        html,
+        body {
+            background-color: #000;
+            /* 或您想要的深色背景色 */
+            /* overscroll-behavior: none; */
+            /* 防止过度滚动效果 */
+        }
+
+        /* 对于移动设备的滚动效果 */
+        @media (max-width: 768px) {
+            html {
+                background-color: #000;
+                /* 确保移动设备也有正确的背景色 */
+            }
+        }
+    </style>
 </head>
 
 <body id="{{ .Component }}">
