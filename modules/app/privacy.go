@@ -24,6 +24,10 @@ func Privacy(c *gin.Context) {
 				Title:   "Cookie Policy",
 				Content: "This is the cookie policy",
 			},
+			{
+				Title:   "Cookie Policy",
+				Content: "This is the cookie policy",
+			},
 		},
 	}
 

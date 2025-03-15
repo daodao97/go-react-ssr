@@ -22053,7 +22053,7 @@ B2.displayName = "DropdownMenu.Separator";
 
 // frontend/components/Privacy.tsx
 function Privacy({ title = "", content = [] }) {
-  return /* @__PURE__ */ import_react5.default.createElement(p6, { direction: "column", gap: "4", style: { width: "100%" } }, /* @__PURE__ */ import_react5.default.createElement("h1", null, title), content.map((item, index2) => /* @__PURE__ */ import_react5.default.createElement(p6, { key: index2, direction: "column", gap: "2" }, /* @__PURE__ */ import_react5.default.createElement("h3", null, item.title), /* @__PURE__ */ import_react5.default.createElement("p", null, item.content))));
+  return /* @__PURE__ */ import_react5.default.createElement(p6, { direction: "column", gap: "4", className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-gray-900" }, /* @__PURE__ */ import_react5.default.createElement("h1", { className: "text-4xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-4 border-gray-200 dark:border-gray-700" }, title), content.map((item, index2) => /* @__PURE__ */ import_react5.default.createElement(p6, { key: index2, direction: "column", gap: "2", className: "mb-8 bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300" }, /* @__PURE__ */ import_react5.default.createElement("h3", { className: "text-xl font-semibold text-gray-800 dark:text-gray-100" }, item.title), /* @__PURE__ */ import_react5.default.createElement("p", { className: "text-gray-600 dark:text-gray-300 leading-relaxed" }, item.content))));
 }
 
 // frontend/lib/polyfill.js
