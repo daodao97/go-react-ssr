@@ -1,6 +1,5 @@
 import React from "react";
 import { getWebsite, t } from "../lib/i18n";
-import { getIcon } from "../lib/icons";
 
 import { FaGithub, FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
@@ -10,8 +9,8 @@ const socialIcons = {
     instagram: FaInstagram,
     linkedin: FaLinkedin,
     youtube: FaYoutube,
+    github: FaGithub,
 }
-
 
 export function Footer() {
     const website = getWebsite()

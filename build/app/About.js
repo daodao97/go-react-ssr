@@ -4,7 +4,7 @@ import {
   renderPage,
   require_react,
   t
-} from "../chunk-MXQTSPSH.js";
+} from "../chunk-LCVB7C4E.js";
 import {
   __toESM
 } from "../chunk-U67V476Y.js";
