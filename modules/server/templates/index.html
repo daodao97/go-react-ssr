@@ -48,8 +48,8 @@
         window.USER_INFO = JSON.parse({{ convertToJson .UserInfo }});
         window.LANG = "{{ .Lang }}";
     </script>
-    <script defer type="module" src="/assets/app/{{.Component}}"></script>
-    <script type="module" src="/assets/app.js"></script>
+    <script defer type="module" src="/assets/app/{{.Component}}?v={{ .Version }}"></script>
+    <script type="module" src="/assets/app.js?v={{ .Version }}"></script>
     {{ if .GoogleAdsJS }}
     <script async src="{{ .GoogleAdsJS }}" crossorigin="anonymous"></script>
     {{ end }}

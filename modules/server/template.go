@@ -150,6 +150,8 @@ func (r *HTMLRender) Render(w http.ResponseWriter) error {
 		}
 	}
 
+	data.Version = "1.0.0"
+
 	return r.Template.ExecuteTemplate(w, r.TemplateName, data)
 }
 
@@ -176,6 +178,7 @@ type GeneralPayload struct {
 	GoogleAdsJS      string
 	GoogleAnalytics  string
 	Head             *model.Head
+	Version          string
 }
 
 func extendPayload(
