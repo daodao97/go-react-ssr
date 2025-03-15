@@ -1,0 +1,14 @@
+{
+    "lang": "🇬🇧 English",
+    "title": "go.ssr",
+    "nav": {
+        "home": "Home",
+        "about": "About"
+    },
+    "login": "Login",
+    "logout": "Logout",
+    "footer": {
+        "title": "Go React SSR",
+        "desc": "Go React SSR desc"
+    }
+}

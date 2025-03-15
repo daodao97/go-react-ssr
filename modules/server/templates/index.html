@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ .Lang }}" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="style" href="/assets/app.css" />
+    <link rel="stylesheet" href="/assets/app.css" />
+    {{ with .Head }}
+    <title>{{ .Title }}</title>
+    {{ range .Meta }}
+    {{ if eq .Property "" }}
+    <meta name="{{ .Name }}" content="{{ .Content }}" />
+    {{ else }}
+    <meta property="{{ .Property }}" content="{{ .Content }}" />
+    {{ end }}
+    {{ end }}
+    {{ range .Link }}
+    <link rel="{{ .Rel }}" href="{{ .Href }}" />
+    {{ end }}
+    {{ end }}
+    <link rel="icon" type="image/svg+xml" href="/static/logo.svg" />
+</head>
+
+<body id="{{ .Component }}">
+    <section id="react-app">{{.InnerHtmlContent}}</section>
+    <script type="text/javascript">
+        window.INITIAL_PROPS = JSON.parse({{ convertToJson .Payload }});
+        window.TRANSLATIONS = JSON.parse({{ convertToJson .Translations }});
+        window.WEBSITE = JSON.parse({{ convertToJson .Website }});
+        window.USER_INFO = JSON.parse({{ convertToJson .UserInfo }});
+        window.LANG = "{{ .Lang }}";
+    </script>
+    <script defer type="module" src="/assets/app/{{.Component}}"></script>
+    <script type="module" src="/assets/app.js"></script>
+    {{ if .GoogleAdsJS }}
+    <script async src="{{ .GoogleAdsJS }}" crossorigin="anonymous"></script>
+    {{ end }}
+    {{ if .GoogleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .GoogleAnalytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ .GoogleAnalytics }}');
+    </script>
+    {{ end }}
+</body>
+
+</html>

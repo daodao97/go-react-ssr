@@ -1,0 +1,8 @@
+database:
+  - name: default
+    driver: mysql
+    dsn: root:root@tcp(localhost:3306)/exmaple?charset=utf8mb4&parseTime=True&loc=Local
+
+domain: example.com
+app_id: example.com
+jwt_secret: 1234567890

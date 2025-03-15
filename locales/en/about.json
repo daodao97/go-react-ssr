@@ -1,0 +1,4 @@
+{
+    "title": "About",
+    "description": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend."
+}
