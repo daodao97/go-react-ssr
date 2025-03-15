@@ -9,6 +9,8 @@ export function LoginModal({ open, onOpenChange }: { open: boolean; onOpenChange
     const website = getWebsite();
     const authProviders = website.AuthProvider || [];
 
+    console.log("authProviders", authProviders)
+
     return (
         <Dialog.Root open={open} onOpenChange={onOpenChange}>
             <Dialog.Portal>

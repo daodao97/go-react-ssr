@@ -121,8 +121,6 @@ func (r *HTMLRender) Render(w http.ResponseWriter) error {
 	var htmlContent template.HTML
 	var err error
 
-	fmt.Println("TemplateName 999", r.TemplateName)
-
 	if r.ComponentName != "" {
 		htmlContent, err = r.renderer.RenderReact(r.renderer.ginContext, r.ComponentName, r.Data)
 		if err != nil {

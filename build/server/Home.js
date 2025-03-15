@@ -22874,6 +22874,7 @@ var logout = () => {
 function LoginModal({ open, onOpenChange }) {
   const website = getWebsite();
   const authProviders = website.AuthProvider || [];
+  console.log("authProviders", authProviders);
   return /* @__PURE__ */ import_react6.default.createElement(Root3, { open, onOpenChange }, /* @__PURE__ */ import_react6.default.createElement(Portal2, null, /* @__PURE__ */ import_react6.default.createElement(Overlay, { className: "fixed inset-0 bg-black/50 data-[state=open]:animate-overlayShow" }), /* @__PURE__ */ import_react6.default.createElement(Content, { className: "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 shadow-lg max-w-md w-full data-[state=open]:animate-contentShow" }, /* @__PURE__ */ import_react6.default.createElement(Title, { className: "text-xl font-bold mb-4" }, "\u767B\u5F55"), /* @__PURE__ */ import_react6.default.createElement(Description, { className: "text-sm text-gray-500 mb-4" }, "\u8BF7\u9009\u62E9\u4EE5\u4E0B\u65B9\u5F0F\u767B\u5F55\u60A8\u7684\u8D26\u6237"), /* @__PURE__ */ import_react6.default.createElement("div", { className: "space-y-4" }, authProviders.map((provider) => {
     if (provider.Provider === "github") {
       return /* @__PURE__ */ import_react6.default.createElement(GithubLogin, { key: provider.Provider, data: provider });

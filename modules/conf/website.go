@@ -4,7 +4,7 @@ type Website struct {
 	Lang         string
 	SupportLang  []string
 	LangMap      map[string]string
-	AuthProvider []AuthProvider
+	AuthProvider []AuthProvider `yaml:"auth_provider"`
 	Header       Header
 	Footer       Footer
 }
@@ -17,10 +17,10 @@ const (
 )
 
 type AuthProvider struct {
-	Provider     AuthProviderType
-	ClientID     string
-	ClientSecret string
-	RedirectURI  string
+	Provider     AuthProviderType `yaml:"provider"`
+	ClientID     string           `yaml:"client_id"`
+	ClientSecret string           `yaml:"client_secret"`
+	RedirectURI  string           `yaml:"redirect_uri"`
 }
 
 type Header struct {
