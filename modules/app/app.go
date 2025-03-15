@@ -11,7 +11,6 @@ import (
 	"github.com/highercomve/go-react-ssr/modules/model"
 )
 
-// LoadApp 加载应用程序路由
 func LoadApp(r *gin.Engine) *gin.RouterGroup {
 	app := r.Group("")
 	app.Use(gzip.Gzip(gzip.DefaultCompression))
