@@ -1,6 +1,18 @@
 import React from "react";
 import { getWebsite, t } from "../lib/i18n";
 import { getIcon } from "../lib/icons";
+
+import { FaGithub, FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+
+const socialIcons = {
+    twitter: FaTwitter,
+    facebook: FaFacebook,
+    instagram: FaInstagram,
+    linkedin: FaLinkedin,
+    youtube: FaYoutube,
+}
+
+
 export function Footer() {
     const website = getWebsite()
     if (!website) {
@@ -23,8 +35,8 @@ export function Footer() {
                         </p>
                         <div className="flex space-x-4 mt-4">
                             {website.Footer.Social.map((social) => (
-                                <a target="_blank" key={social.Text + " " + social.Icon} href={social.URL} className="text-gray-600 hover:text-gray-900">
-                                    {social.Icon ? getIcon(social.Icon) : social.Text}
+                                <a target="_blank" key={social.Text + " " + social.Icon} href={social.URL} className="text-gray-600">
+                                    {social.Icon ? React.createElement(socialIcons[social.Icon as keyof typeof socialIcons]) : social.Text}
                                 </a>
                             ))}
                         </div>
@@ -40,7 +52,7 @@ export function Footer() {
                                     <ul className="mt-4 space-y-2">
                                         {group.Links.map((link) => (
                                             <li key={link.Text}><a target="_blank" href={link.URL}
-                                                className="text-gray-600 hover:text-gray-900">{link.Text}</a>
+                                                className="text-gray-600">{link.Text}</a>
                                             </li>
                                         ))}
                                     </ul>
@@ -53,13 +65,13 @@ export function Footer() {
                 {/* Copyright Section */}
                 <div className="mt-8 pt-8 border-t border-gray-700 dark:border-gray-200">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-gray-500 dark:text-gray-400 text-sm">{t(website.Footer.Copyright, website.Footer.Copyright)}</p>
+                        <p className="text-gray-500 text-sm">{t(website.Footer.Copyright, website.Footer.Copyright)}</p>
                         <div className="mt-4 md:mt-0">
                             {website.Footer.Policy?.map((policy, index) => (
                                 <React.Fragment key={policy.URL}>
                                     <a href={policy.URL}
-                                        className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 text-sm">{t(policy.Text, policy.Text)}</a>
-                                    {index < website.Footer.Policy.length - 1 && <span className="mx-2 text-gray-500 dark:text-gray-400">|</span>}
+                                        className="text-gray-500 text-sm">{t(policy.Text, policy.Text)}</a>
+                                    {index < website.Footer.Policy.length - 1 && <span className="mx-2 text-gray-500">|</span>}
                                 </React.Fragment>
                             ))}
                         </div>

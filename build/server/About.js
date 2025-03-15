@@ -1197,7 +1197,7 @@ var require_react_dom_development = __commonJS({
         return dispatcher;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React43 = require_react(), Internals = {
+      var React44 = require_react(), Internals = {
         d: {
           f: noop,
           r: function() {
@@ -1215,7 +1215,7 @@ var require_react_dom_development = __commonJS({
         },
         p: 0,
         findDOMNode: null
-      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React43.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React44.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
         "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
       );
@@ -1826,9 +1826,9 @@ var require_react_jsx_runtime_development = __commonJS({
         info || (parentType = getComponentNameFromType(parentType)) && (info = "\n\nCheck the top-level render call using <" + parentType + ">.");
         return info;
       }
-      var React43 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+      var React44 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
       Symbol.for("react.provider");
-      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React43.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
+      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React44.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
       disabledLog.__reactDisabledLog = true;
       var prefix, suffix, reentry = false;
       var componentFrameCache = new ("function" === typeof WeakMap ? WeakMap : Map)();
@@ -2870,7 +2870,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React43.Children.forEach(children, function(child) {
+        React44.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -7105,7 +7105,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
           );
         return result;
       }
-      var React43 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
+      var React44 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
         "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), illegalAttributeNameCache = {}, validatedAttributeNameCache = {}, unitlessNumbers = new Set(
         "animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp".split(
@@ -7749,7 +7749,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React43.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React44.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -9296,7 +9296,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React43.Children.forEach(children, function(child) {
+        React44.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -13459,13 +13459,13 @@ var require_react_dom_server_browser_development = __commonJS({
         }
       }
       function ensureCorrectIsomorphicReactVersion() {
-        var isomorphicReactPackageVersion = React43.version;
+        var isomorphicReactPackageVersion = React44.version;
         if ("19.0.0" !== isomorphicReactPackageVersion)
           throw Error(
             'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.0.0\nLearn more: https://react.dev/warnings/version-mismatch")
           );
       }
-      var React43 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
+      var React44 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
       channel.port1.onmessage = function() {
         var task = taskQueue.shift();
         task && task();
@@ -14116,7 +14116,7 @@ var require_react_dom_server_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React43.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React44.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -22818,11 +22818,11 @@ if (typeof globalThis.URLSearchParams === "undefined") {
 }
 
 // frontend/lib/ServerRender.tsx
-var import_react12 = __toESM(require_react());
+var import_react13 = __toESM(require_react());
 var import_server = __toESM(require_server_browser());
 
 // frontend/layout/Theme.tsx
-var import_react11 = __toESM(require_react());
+var import_react12 = __toESM(require_react());
 
 // frontend/layout/Header.tsx
 var import_react8 = __toESM(require_react());
@@ -23136,243 +23136,192 @@ function Header() {
 }
 
 // frontend/layout/Footer.tsx
-var import_react10 = __toESM(require_react());
+var import_react11 = __toESM(require_react());
 
-// frontend/lib/icons.tsx
-var import_react9 = __toESM(require_react());
-var FacebookIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-facebook ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" })
-  );
+// node_modules/react-icons/lib/iconBase.mjs
+var import_react10 = __toESM(require_react(), 1);
+
+// node_modules/react-icons/lib/iconContext.mjs
+var import_react9 = __toESM(require_react(), 1);
+var DefaultContext = {
+  color: void 0,
+  size: void 0,
+  className: void 0,
+  style: void 0,
+  attr: void 0
 };
-var TwitterIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-twitter ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" })
-  );
-};
-var InstagramIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-instagram ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("rect", { x: "2", y: "2", width: "20", height: "20", rx: "5", ry: "5" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }),
-    /* @__PURE__ */ import_react9.default.createElement("line", { x1: "17.5", y1: "6.5", x2: "17.51", y2: "6.5" })
-  );
-};
-var LinkedInIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-linkedin ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" }),
-    /* @__PURE__ */ import_react9.default.createElement("rect", { x: "2", y: "9", width: "4", height: "12" }),
-    /* @__PURE__ */ import_react9.default.createElement("circle", { cx: "4", cy: "4", r: "2" })
-  );
-};
-var YouTubeIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-youtube ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" }),
-    /* @__PURE__ */ import_react9.default.createElement("polygon", { points: "9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" })
-  );
-};
-var TikTokIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-tiktok ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm10-9v4.5a6 6 0 0 1-4.5 1.5 6 6 0 0 1-6-6h4.5A1.5 1.5 0 0 0 15 1.5h4.5z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M19 3v12a6 6 0 0 1-6 6v-4.5a1.5 1.5 0 0 0 1.5-1.5V6c0-1.66-1.34-3-3-3h-4.5" })
-  );
-};
-var WeChatIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-wechat ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M9.5 9.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M14.5 9.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M15.5 14c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M10.5 14c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M6.69 4.92C3 5.7 0 8.92 0 12.92c0 2.52 1.23 4.8 3.16 6.34.16.13.31.27.47.39l-.28 1.69c-.09.52.43.93.91.7l1.91-.91c.34.09.69.16 1.05.21 2.31.33 4.54-.1 6.18-1.09" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M24 17.92c0-4-4.08-7.23-9.08-6.23-4.08.82-7.08 4.04-7.08 8.04 0 4.43 4.49 7.92 10 6.92.39-.07.77-.16 1.14-.27l1.91.91c.48.23 1-.18.91-.7l-.28-1.69c1.93-1.39 3.16-3.67 3.16-6.19.31-.26-.37-.53-.68-.79z" })
-  );
-};
-var WeiboIcon = ({
-  className = "",
-  size: size4 = 24,
-  color = "currentColor"
-}) => {
-  return /* @__PURE__ */ import_react9.default.createElement(
-    "svg",
-    {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: size4,
-      height: size4,
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: color,
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: `feather feather-weibo ${className}`
-    },
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M10 15c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M17.5 7.5v.01" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M15 4.5c3.3 0 6 2.7 6 6v3c0 3.3-2.7 6-6 6H9c-3.3 0-6-2.7-6-6v-3c0-3.3 2.7-6 6-6" }),
-    /* @__PURE__ */ import_react9.default.createElement("path", { d: "M7 13.5c0 2.5 2.5 4.5 5.5 4.5s5.5-2 5.5-4.5c0-2-3-3-3-3s1-2-1-2c-1 0-1.5 1-1.5 1s-2.5-.5-5.5 3.5z" })
-  );
-};
-function getIcon(icon) {
-  switch (icon) {
-    case "facebook":
-      return /* @__PURE__ */ import_react9.default.createElement(FacebookIcon, null);
-    case "twitter":
-      return /* @__PURE__ */ import_react9.default.createElement(TwitterIcon, null);
-    case "instagram":
-      return /* @__PURE__ */ import_react9.default.createElement(InstagramIcon, null);
-    case "linkedin":
-      return /* @__PURE__ */ import_react9.default.createElement(LinkedInIcon, null);
-    case "youtube":
-      return /* @__PURE__ */ import_react9.default.createElement(YouTubeIcon, null);
-    case "tiktok":
-      return /* @__PURE__ */ import_react9.default.createElement(TikTokIcon, null);
-    case "wechat":
-      return /* @__PURE__ */ import_react9.default.createElement(WeChatIcon, null);
-    case "weibo":
-      return /* @__PURE__ */ import_react9.default.createElement(WeiboIcon, null);
+var IconContext = import_react9.default.createContext && /* @__PURE__ */ import_react9.default.createContext(DefaultContext);
+
+// node_modules/react-icons/lib/iconBase.mjs
+var _excluded = ["attr", "size", "title"];
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose2(source, excluded);
+  var key, i6;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i6 = 0; i6 < sourceSymbolKeys.length; i6++) {
+      key = sourceSymbolKeys[i6];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
   }
+  return target;
+}
+function _objectWithoutPropertiesLoose2(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  for (var key in source) {
+    if (Object.prototype.hasOwnProperty.call(source, key)) {
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function(target) {
+    for (var i6 = 1; i6 < arguments.length; i6++) {
+      var source = arguments[i6];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function ownKeys(e19, r14) {
+  var t11 = Object.keys(e19);
+  if (Object.getOwnPropertySymbols) {
+    var o15 = Object.getOwnPropertySymbols(e19);
+    r14 && (o15 = o15.filter(function(r15) {
+      return Object.getOwnPropertyDescriptor(e19, r15).enumerable;
+    })), t11.push.apply(t11, o15);
+  }
+  return t11;
+}
+function _objectSpread(e19) {
+  for (var r14 = 1; r14 < arguments.length; r14++) {
+    var t11 = null != arguments[r14] ? arguments[r14] : {};
+    r14 % 2 ? ownKeys(Object(t11), true).forEach(function(r15) {
+      _defineProperty(e19, r15, t11[r15]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e19, Object.getOwnPropertyDescriptors(t11)) : ownKeys(Object(t11)).forEach(function(r15) {
+      Object.defineProperty(e19, r15, Object.getOwnPropertyDescriptor(t11, r15));
+    });
+  }
+  return e19;
+}
+function _defineProperty(obj, key, value) {
+  key = _toPropertyKey(key);
+  if (key in obj) {
+    Object.defineProperty(obj, key, { value, enumerable: true, configurable: true, writable: true });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+function _toPropertyKey(t11) {
+  var i6 = _toPrimitive(t11, "string");
+  return "symbol" == typeof i6 ? i6 : i6 + "";
+}
+function _toPrimitive(t11, r14) {
+  if ("object" != typeof t11 || !t11) return t11;
+  var e19 = t11[Symbol.toPrimitive];
+  if (void 0 !== e19) {
+    var i6 = e19.call(t11, r14 || "default");
+    if ("object" != typeof i6) return i6;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r14 ? String : Number)(t11);
+}
+function Tree2Element(tree) {
+  return tree && tree.map((node, i6) => /* @__PURE__ */ import_react10.default.createElement(node.tag, _objectSpread({
+    key: i6
+  }, node.attr), Tree2Element(node.child)));
+}
+function GenIcon(data) {
+  return (props) => /* @__PURE__ */ import_react10.default.createElement(IconBase, _extends({
+    attr: _objectSpread({}, data.attr)
+  }, props), Tree2Element(data.child));
+}
+function IconBase(props) {
+  var elem = (conf) => {
+    var {
+      attr,
+      size: size4,
+      title
+    } = props, svgProps = _objectWithoutProperties(props, _excluded);
+    var computedSize = size4 || conf.size || "1em";
+    var className;
+    if (conf.className) className = conf.className;
+    if (props.className) className = (className ? className + " " : "") + props.className;
+    return /* @__PURE__ */ import_react10.default.createElement("svg", _extends({
+      stroke: "currentColor",
+      fill: "currentColor",
+      strokeWidth: "0"
+    }, conf.attr, attr, svgProps, {
+      className,
+      style: _objectSpread(_objectSpread({
+        color: props.color || conf.color
+      }, conf.style), props.style),
+      height: computedSize,
+      width: computedSize,
+      xmlns: "http://www.w3.org/2000/svg"
+    }), title && /* @__PURE__ */ import_react10.default.createElement("title", null, title), props.children);
+  };
+  return IconContext !== void 0 ? /* @__PURE__ */ import_react10.default.createElement(IconContext.Consumer, null, (conf) => elem(conf)) : elem(DefaultContext);
+}
+
+// node_modules/react-icons/fa/index.mjs
+function FaFacebook(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" }, "child": [] }] })(props);
+}
+function FaInstagram(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" }, "child": [] }] })(props);
+}
+function FaLinkedin(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" }, "child": [] }] })(props);
+}
+function FaTwitter(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" }, "child": [] }] })(props);
+}
+function FaYoutube(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 576 512" }, "child": [{ "tag": "path", "attr": { "d": "M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" }, "child": [] }] })(props);
 }
 
 // frontend/layout/Footer.tsx
+var socialIcons = {
+  twitter: FaTwitter,
+  facebook: FaFacebook,
+  instagram: FaInstagram,
+  linkedin: FaLinkedin,
+  youtube: FaYoutube
+};
 function Footer() {
   const website = getWebsite();
   if (!website) {
     return null;
   }
-  return /* @__PURE__ */ import_react10.default.createElement("footer", { className: "py-12 w-full bg-gray-900" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between md:items-center" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col items-center md:items-start text-center md:text-left" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex items-center" }, website.Footer.Logo && /* @__PURE__ */ import_react10.default.createElement("img", { src: website.Footer.Logo, alt: t10(website.Footer.Title, website.Footer.Title), className: "h-8 w-8" }), /* @__PURE__ */ import_react10.default.createElement("span", { className: "ml-2 text-xl text-amber-600 font-semibold" }, t10(website.Footer.Title, website.Footer.Title))), /* @__PURE__ */ import_react10.default.createElement("p", { className: "mt-4 text-gray-600 dark:text-gray-400" }, t10(website.Footer.Desc, website.Footer.Desc)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex space-x-4 mt-4" }, website.Footer.Social.map((social) => /* @__PURE__ */ import_react10.default.createElement("a", { target: "_blank", key: social.Text + " " + social.Icon, href: social.URL, className: "text-gray-600 hover:text-gray-900" }, social.Icon ? getIcon(social.Icon) : social.Text)))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 md:mt-0 md:col-span-6 md:col-start-7 text-center md:text-right" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-row justify-center md:justify-end overflow-x-auto md:grid md:grid-cols-3 gap-4" }, website.Footer.Links.map((group) => /* @__PURE__ */ import_react10.default.createElement("div", { key: group.Title, className: "text-center md:text-right min-w-max px-3" }, /* @__PURE__ */ import_react10.default.createElement("h3", { className: "text-white font-medium" }, t10(group.Title, group.Title)), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "mt-4 space-y-2" }, group.Links.map((link) => /* @__PURE__ */ import_react10.default.createElement("li", { key: link.Text }, /* @__PURE__ */ import_react10.default.createElement(
+  return /* @__PURE__ */ import_react11.default.createElement("footer", { className: "py-12 w-full bg-gray-900" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex flex-col md:flex-row justify-between md:items-center" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex flex-col items-center md:items-start text-center md:text-left" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex items-center" }, website.Footer.Logo && /* @__PURE__ */ import_react11.default.createElement("img", { src: website.Footer.Logo, alt: t10(website.Footer.Title, website.Footer.Title), className: "h-8 w-8" }), /* @__PURE__ */ import_react11.default.createElement("span", { className: "ml-2 text-xl text-amber-600 font-semibold" }, t10(website.Footer.Title, website.Footer.Title))), /* @__PURE__ */ import_react11.default.createElement("p", { className: "mt-4 text-gray-600 dark:text-gray-400" }, t10(website.Footer.Desc, website.Footer.Desc)), /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex space-x-4 mt-4" }, website.Footer.Social.map((social) => /* @__PURE__ */ import_react11.default.createElement("a", { target: "_blank", key: social.Text + " " + social.Icon, href: social.URL, className: "text-gray-600" }, social.Icon ? import_react11.default.createElement(socialIcons[social.Icon]) : social.Text)))), /* @__PURE__ */ import_react11.default.createElement("div", { className: "mt-8 md:mt-0 md:col-span-6 md:col-start-7 text-center md:text-right" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex flex-row justify-center md:justify-end overflow-x-auto md:grid md:grid-cols-3 gap-4" }, website.Footer.Links.map((group) => /* @__PURE__ */ import_react11.default.createElement("div", { key: group.Title, className: "text-center md:text-right min-w-max px-3" }, /* @__PURE__ */ import_react11.default.createElement("h3", { className: "text-white font-medium" }, t10(group.Title, group.Title)), /* @__PURE__ */ import_react11.default.createElement("ul", { className: "mt-4 space-y-2" }, group.Links.map((link) => /* @__PURE__ */ import_react11.default.createElement("li", { key: link.Text }, /* @__PURE__ */ import_react11.default.createElement(
     "a",
     {
       target: "_blank",
       href: link.URL,
-      className: "text-gray-600 hover:text-gray-900"
+      className: "text-gray-600"
     },
     link.Text
-  ))))))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 pt-8 border-t border-gray-700 dark:border-gray-200" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "text-gray-500 dark:text-gray-400 text-sm" }, t10(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react10.default.createElement(
+  ))))))))), /* @__PURE__ */ import_react11.default.createElement("div", { className: "mt-8 pt-8 border-t border-gray-700 dark:border-gray-200" }, /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react11.default.createElement("p", { className: "text-gray-500 text-sm" }, t10(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react11.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react11.default.createElement(import_react11.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react11.default.createElement(
     "a",
     {
       href: policy.URL,
-      className: "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 text-sm"
+      className: "text-gray-500 text-sm"
     },
     t10(policy.Text, policy.Text)
-  ), index2 < website.Footer.Policy.length - 1 && /* @__PURE__ */ import_react10.default.createElement("span", { className: "mx-2 text-gray-500 dark:text-gray-400" }, "|"))))))));
+  ), index2 < website.Footer.Policy.length - 1 && /* @__PURE__ */ import_react11.default.createElement("span", { className: "mx-2 text-gray-500" }, "|"))))))));
 }
 
 // frontend/layout/Theme.tsx
@@ -23391,11 +23340,11 @@ function MyTheme({
   if (themeConfig === void 0) {
     themeConfig = defaultThemeConfig;
   }
-  return /* @__PURE__ */ import_react11.default.createElement(
+  return /* @__PURE__ */ import_react12.default.createElement(
     R2,
     null,
-    /* @__PURE__ */ import_react11.default.createElement(LoginModalContainer, null),
-    /* @__PURE__ */ import_react11.default.createElement("div", { className: "flex flex-col min-h-screen h-screen bg-gray-900" }, /* @__PURE__ */ import_react11.default.createElement(Header, null), /* @__PURE__ */ import_react11.default.createElement("main", { className: "flex-grow" }, children), /* @__PURE__ */ import_react11.default.createElement(Footer, null))
+    /* @__PURE__ */ import_react12.default.createElement(LoginModalContainer, null),
+    /* @__PURE__ */ import_react12.default.createElement("div", { className: "flex flex-col min-h-screen h-screen bg-gray-900" }, /* @__PURE__ */ import_react12.default.createElement(Header, null), /* @__PURE__ */ import_react12.default.createElement("main", { className: "flex-grow" }, children), /* @__PURE__ */ import_react12.default.createElement(Footer, null))
   );
 }
 
@@ -23411,7 +23360,7 @@ function createServerRenderer({ Component, transformProps }) {
       userInfo
     };
     return (0, import_server.renderToString)(
-      /* @__PURE__ */ import_react12.default.createElement(MyTheme, null, /* @__PURE__ */ import_react12.default.createElement(Component, { ...propsWithUser }))
+      /* @__PURE__ */ import_react13.default.createElement(MyTheme, null, /* @__PURE__ */ import_react13.default.createElement(Component, { ...propsWithUser }))
     );
   };
 }
