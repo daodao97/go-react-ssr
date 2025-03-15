@@ -34,7 +34,7 @@ export default function Faq() {
     ]);
 
     return (
-        <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 pt-12 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
             <div className="text-center mb-12">
                 <span className="inline-block bg-amber-500 px-3 py-1 rounded-full text-sm font-medium mb-4">常见问题</span>
                 <h1 className="text-3xl font-bold sm:text-4xl mb-4">关于 ShipAny 的常见问题</h1>

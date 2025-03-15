@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Flex } from "@radix-ui/themes";
 import Faq from "../blocks/faq/Faq";
 import Hero from "../blocks/hero/Hero";
 /**
@@ -23,9 +22,9 @@ export function Home({ message = "", initialCount = 0 }) {
 	}, []);
 
 	return (
-		<Flex gap="3" className="flex-1 flex-col">
+		<div className="flex-1 flex-col bg-gray-900">
 			<Hero />
 			<Faq />
-		</Flex>
+		</div>
 	);
 }

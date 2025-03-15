@@ -7,6 +7,8 @@ import (
 	"github.com/highercomve/go-react-ssr/modules/server"
 )
 
+//go:generate go run ./cmd/build/...
+
 func init() {
 	buildEnvironmentJS("build")
 }
