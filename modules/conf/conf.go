@@ -14,6 +14,8 @@ type Conf struct {
 	GoogleAnalytics string       `yaml:"google_analytics"`
 	Website         Website      `json:"website" yaml:"website"`
 	JwtSecret       string       `json:"jwt_secret" yaml:"jwt_secret"`
+	GitCommit       string       `json:"git_commit" yaml:"git_commit"`
+	GitTag          string       `json:"git_tag" yaml:"git_tag"`
 }
 
 var ConfInstance *Conf
@@ -89,4 +91,9 @@ func Init() error {
 
 func Get() *Conf {
 	return ConfInstance
+}
+
+func SetGitInfo(commit string, tag string) {
+	ConfInstance.GitCommit = commit
+	ConfInstance.GitTag = tag
 }

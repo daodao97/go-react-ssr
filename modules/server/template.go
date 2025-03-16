@@ -148,7 +148,7 @@ func (r *HTMLRender) Render(w http.ResponseWriter) error {
 		}
 	}
 
-	data.Version = "1.0.0"
+	data.Version = conf.Get().GitCommit + "_" + conf.Get().GitTag
 
 	return r.Template.ExecuteTemplate(w, r.TemplateName, data)
 }

@@ -4,17 +4,23 @@ import (
 	"os"
 	"strings"
 
+	"github.com/daodao97/xgo/xlog"
 	"github.com/highercomve/go-react-ssr/modules/server"
 )
 
-//go:generate go run ./cmd/build/...
+var (
+	GitCommit string
+	GitTag    string
+)
 
 func init() {
 	buildEnvironmentJS("build")
 }
 
 func main() {
-	server.Start()
+	xlog.Debug("GitCommit", xlog.Any("GitCommit", GitCommit))
+	xlog.Debug("GitTag", xlog.Any("GitTag", GitTag))
+	server.Start(GitCommit, GitTag)
 }
 
 func buildEnvironmentJS(folder string) error {

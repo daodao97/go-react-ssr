@@ -12,9 +12,13 @@ import (
 	"github.com/highercomve/go-react-ssr/modules/lib/i18n"
 )
 
-func Start() {
+func Start(commit string, tag string) {
 	app := xapp.NewApp().
 		AddStartup(i18n.InitI18n, conf.Init, dao.Init).
+		AddStartup(func() error {
+			conf.SetGitInfo(commit, tag)
+			return nil
+		}).
 		AddServer(xapp.NewHttp(xapp.Args.Bind, h))
 
 	if err := app.Run(); err != nil {
