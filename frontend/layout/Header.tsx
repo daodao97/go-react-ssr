@@ -98,7 +98,7 @@ export function Header() {
 
                 {/* 移动端菜单 */}
                 {mobileMenuOpen && (
-                    <div className="md:hidden bg-black/90 backdrop-blur-md shadow-lg absolute w-full z-50 py-4 px-6">
+                    <div className="md:hidden bg-black shadow-lg fixed left-0 right-0 z-50 py-4 px-6">
                         <div className="flex flex-col space-y-4">
                             {/* 导航链接 */}
                             {website.Header.Nav.map((nav) => (
@@ -108,8 +108,9 @@ export function Header() {
                                 </a>
                             ))}
 
-                            {/* 分隔线 */}
-                            <div className="border-t border-gray-200 my-2"></div>
+                            {website.Header.Nav.length > 0 && (
+                                <div className="border-t border-gray-200 my-2"></div>
+                            )}
 
                             {/* 语言切换 */}
                             {multiLang && (
@@ -132,8 +133,10 @@ export function Header() {
                                 </div>
                             )}
 
-                            {/* 登录/用户信息 */}
-                            <div className="border-t border-gray-200 my-2"></div>
+                            {multiLang && (
+                                <div className="border-t border-gray-200 my-2"></div>
+                            )}
+
                             {isLoggedIn ? (
                                 <div className="flex flex-col space-y-2">
                                     <button
@@ -182,10 +185,8 @@ export function Header() {
                     </div>
 
                     {/* 右侧按钮组 */}
-
                     <div className="flex items-center space-x-4">
                         {/* 语言选择按钮 - 使用 Radix UI DropdownMenu */}
-
                         {multiLang && (
                             <DropdownMenu.Root>
                                 <DropdownMenu.Trigger>

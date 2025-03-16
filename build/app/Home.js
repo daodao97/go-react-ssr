@@ -3,7 +3,7 @@ import {
   getTranslations,
   renderPage,
   require_react
-} from "../chunk-O7X2OGE7.js";
+} from "../chunk-4XX2B5P7.js";
 import {
   __toESM
 } from "../chunk-U67V476Y.js";
