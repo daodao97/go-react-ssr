@@ -27794,6 +27794,9 @@ function matchPath(path, currentPath) {
   }
   return currentPath === path;
 }
+function getTranslations(path, defaultValue) {
+  return get_default(window.TRANSLATIONS, path, defaultValue);
+}
 
 // frontend/lib/auth.ts
 var getUser = () => {
@@ -27977,7 +27980,7 @@ function Header() {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-  return /* @__PURE__ */ import_react7.default.createElement("nav", { className: "sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "md:!hidden flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react7.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react7.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t11(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex items-center" }, /* @__PURE__ */ import_react7.default.createElement(o11, { variant: "outline", color: "gray", onClick: toggleMobileMenu }, /* @__PURE__ */ import_react7.default.createElement(HamburgerMenuIcon, null)))), mobileMenuOpen && /* @__PURE__ */ import_react7.default.createElement("div", { className: "md:hidden bg-black/90 backdrop-blur-md shadow-lg absolute w-full z-50 py-4 px-6" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex flex-col space-y-4" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react7.default.createElement(
+  return /* @__PURE__ */ import_react7.default.createElement("nav", { className: "top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "md:!hidden flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react7.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react7.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t11(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex items-center" }, /* @__PURE__ */ import_react7.default.createElement(o11, { variant: "outline", color: "gray", onClick: toggleMobileMenu }, /* @__PURE__ */ import_react7.default.createElement(HamburgerMenuIcon, null)))), mobileMenuOpen && /* @__PURE__ */ import_react7.default.createElement("div", { className: "md:hidden bg-black/90 backdrop-blur-md shadow-lg absolute w-full z-50 py-4 px-6" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex flex-col space-y-4" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react7.default.createElement(
     "a",
     {
       key: nav.Text,
@@ -28010,12 +28013,13 @@ function Header() {
       className: "w-full mt-2"
     },
     t11("root.login", "Login")
-  ))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "hidden md:flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react7.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react7.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t11(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "hidden md:flex items-center justify-start flex-1" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex space-x-8" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react7.default.createElement(
+  ))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "hidden md:flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react7.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react7.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react7.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t11(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "hidden md:flex items-center justify-center flex-1" }, /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex space-x-8" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react7.default.createElement(
     "a",
     {
       key: nav.Text,
       href: getUrlWithLang(nav.URL),
-      className: `hover:text-gray-100 px-3 py-2 font-medium text-sm transition-colors ${matchPath(nav.URL, window.location.pathname) ? "text-gray-100" : "text-gray-700"}`
+      className: `px-3 py-2 font-medium text-sm transition-colors rounded-md
+                                    ${matchPath(nav.URL, window.location.pathname) ? "text-amber-500 bg-white/5" : "text-gray-400 hover:text-gray-100 hover:bg-white/5"}`
     },
     t11(nav.Text, nav.Text)
   )))), /* @__PURE__ */ import_react7.default.createElement("div", { className: "flex items-center space-x-4" }, multiLang && /* @__PURE__ */ import_react7.default.createElement(dropdown_menu_exports.Root, null, /* @__PURE__ */ import_react7.default.createElement(dropdown_menu_exports.Trigger, null, /* @__PURE__ */ import_react7.default.createElement(
@@ -28228,12 +28232,12 @@ function Footer() {
   return /* @__PURE__ */ import_react10.default.createElement("footer", { className: "py-12 w-full bg-gray-900" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between md:items-center" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col items-center md:items-start text-center md:text-left" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex items-center" }, website.Footer.Logo && /* @__PURE__ */ import_react10.default.createElement("img", { src: website.Footer.Logo, alt: t11(website.Footer.Title, website.Footer.Title), className: "h-8 w-8" }), /* @__PURE__ */ import_react10.default.createElement("span", { className: "ml-2 text-xl text-amber-600 font-semibold" }, t11(website.Footer.Title, website.Footer.Title))), /* @__PURE__ */ import_react10.default.createElement("p", { className: "mt-4 text-gray-600 dark:text-gray-400" }, t11(website.Footer.Desc, website.Footer.Desc)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex space-x-4 mt-4" }, website.Footer.Social.map((social) => /* @__PURE__ */ import_react10.default.createElement("a", { target: "_blank", key: social.Text + " " + social.Icon, href: social.URL, className: "text-gray-600" }, social.Icon ? import_react10.default.createElement(socialIcons[social.Icon]) : social.Text)))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 md:mt-0 md:col-span-6 md:col-start-7 text-center md:text-right" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-row justify-center md:justify-end overflow-x-auto md:grid md:grid-cols-3 gap-4" }, website.Footer.Links.map((group) => /* @__PURE__ */ import_react10.default.createElement("div", { key: group.Title, className: "text-center md:text-right min-w-max px-3" }, /* @__PURE__ */ import_react10.default.createElement("h3", { className: "text-white font-medium" }, t11(group.Title, group.Title)), /* @__PURE__ */ import_react10.default.createElement("ul", { className: "mt-4 space-y-2" }, group.Links.map((link) => /* @__PURE__ */ import_react10.default.createElement("li", { key: link.Text }, /* @__PURE__ */ import_react10.default.createElement(
     "a",
     {
-      target: "_blank",
-      href: link.URL,
+      href: link.URL.startsWith("#") ? link.URL : link.URL,
+      target: link.URL.startsWith("#") ? "_self" : "_blank",
       className: "text-gray-600"
     },
     link.Text
-  ))))))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 pt-8 border-t pb-4 border-gray-200 dark:border-gray-700" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "text-gray-500 text-sm" }, t11(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react10.default.createElement(
+  ))))))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 pt-8 border-t pb-4 border-gray-700 dark:border-gray-900" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "text-gray-500 text-sm" }, t11(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react10.default.createElement(
     "a",
     {
       href: policy.URL,
@@ -28295,6 +28299,7 @@ export {
   e13 as e,
   p8 as p2,
   t11 as t,
+  getTranslations,
   renderPage
 };
 /*! Bundled license information:

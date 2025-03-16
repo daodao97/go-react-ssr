@@ -36,3 +36,7 @@ export function matchPath(path: string, currentPath: string): boolean {
     }
     return currentPath === path;
 }
+
+export function getTranslations<T>(path: string, defaultValue: T): T {
+    return get(window.TRANSLATIONS, path, defaultValue);
+}

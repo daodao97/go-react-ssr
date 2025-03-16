@@ -64,15 +64,15 @@ func IndexPage(c *gin.Context) {
 		Meta: []model.Meta{
 			{
 				Name:    "description",
-				Content: "Go React SSR",
+				Content: i18n.Get(c, "home.head.description", "Go React SSR is a framework for building server-side rendered React applications using Go."),
 			},
 			{
 				Name:    "keywords",
-				Content: "Go React SSR",
+				Content: i18n.Get(c, "home.head.keywords", "Go React SSR"),
 			},
 			{
 				Name:    "author",
-				Content: "Go React SSR",
+				Content: i18n.Get(c, "home.head.author", "daodao97"),
 			},
 		},
 		Link: []model.Link{

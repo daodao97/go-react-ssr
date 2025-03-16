@@ -9,6 +9,9 @@
     "logout": "Logout",
     "footer": {
         "title": "Go React SSR",
-        "desc": "Go React SSR desc"
+        "desc": "Go React SSR is a framework for building server-side rendered React applications using Go.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "copyright": "© 2025 • Go React SSR • All rights reserved"
     }
 }

@@ -80,7 +80,7 @@ export function Header() {
     };
 
     return (
-        <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg">
+        <nav className="top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="md:!hidden flex justify-between h-16 items-center px-4">
                     <div className="flex-shrink-0 flex items-center">
@@ -167,11 +167,14 @@ export function Header() {
                     </div>
 
                     {/* 中间导航 - 桌面端显示 */}
-                    <div className="hidden md:flex items-center justify-start flex-1">
+                    <div className="hidden md:flex items-center justify-center flex-1">
                         <div className="flex space-x-8">
                             {website.Header.Nav.map((nav) => (
                                 <a key={nav.Text} href={getUrlWithLang(nav.URL)}
-                                    className={`hover:text-gray-100 px-3 py-2 font-medium text-sm transition-colors ${matchPath(nav.URL, window.location.pathname) ? 'text-gray-100' : 'text-gray-700'}`}>
+                                    className={`px-3 py-2 font-medium text-sm transition-colors rounded-md
+                                    ${matchPath(nav.URL, window.location.pathname)
+                                            ? 'text-amber-500 bg-white/5'
+                                            : 'text-gray-400 hover:text-gray-100 hover:bg-white/5'}`}>
                                     {t(nav.Text, nav.Text)}
                                 </a>
                             ))}

@@ -1,0 +1,61 @@
+{
+    "title": "Home",
+    "description": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend.",
+    "head": {
+        "title": "Go React SSR: Build Server-Side Rendered Apps",
+        "description": "Learn to build server-side rendered applications using Go and React. Step-by-step guide to set up a Go server and integrate it with React for optimal performance.",
+        "keywords": "Go React SSR, Server Side Rendering, React Go Integration, Web Development, Performance Optimization",
+        "author": "daodao97!"
+    },
+    "hero": {
+        "title": "Go React SSR: Build Server-Side Rendered Apps",
+        "description": "Learn to build server-side rendered applications using Go and React. Step-by-step guide to set up a Go server and integrate it with React for optimal performance.",
+        "buttons": [
+            {
+                "text": "Github",
+                "href": "https://github.com/daodao97/go-react-ssr"
+            },
+            {
+                "text": "Documentation",
+                "href": "https://daodao97.github.io/go-react-ssr",
+                "overwirteClassName": "bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white px-4 py-2 rounded-full transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-lg font-medium"
+            }
+        ]
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend.",
+        "tips": "常见问题",
+        "anchor": "faq",
+        "list": [
+            {
+                "question": "What is Go React SSR?",
+                "answer": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend."
+            },
+            {
+                "question": "What is Go React SSR?",
+                "answer": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend."
+            },
+            {
+                "question": "What is Go React SSR?",
+                "answer": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend."
+            },
+            {
+                "question": "What is Go React SSR?",
+                "answer": "This blog post will guide you through the process of rendering React components using Go. We'll start by setting up a basic Go server and then integrate it with a React frontend."
+            }
+        ]
+    },
+    "footer": {
+        "links": [
+            {
+                "Text": "常见问题",
+                "URL": "#faq"
+            },
+            {
+                "Text": "外部链接",
+                "URL": "https://example.com"
+            }
+        ]
+    }
+}

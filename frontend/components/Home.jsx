@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Faq from "../blocks/faq/Faq";
 import Hero from "../blocks/hero/Hero";
+import { getTranslations } from "../lib/i18n";
 /**
  * Home component displays a welcome message.
  *
@@ -15,6 +16,12 @@ export function Home({ message = "", initialCount = 0 }) {
 	const increment = useCallback(() => setCount(count + 1), [count]);
 	const decrement = useCallback(() => setCount(count - 1), [count]);
 
+	const faqs = getTranslations("home.faq", {})
+
+	const hero = getTranslations("home.hero", {})
+
+	console.log(faqs)
+
 	useEffect(() => {
 		setTimeout(() => {
 			setCurrentMessage("Message updated after first render");
@@ -23,8 +30,8 @@ export function Home({ message = "", initialCount = 0 }) {
 
 	return (
 		<div className="flex-1 flex-col bg-gray-900">
-			<Hero />
-			<Faq />
+			<Hero hero={hero} />
+			<Faq faqs={faqs} />
 		</div>
 	);
 }

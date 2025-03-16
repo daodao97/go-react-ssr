@@ -50,8 +50,14 @@ export function Footer() {
                                     <h3 className="text-white font-medium">{t(group.Title, group.Title)}</h3>
                                     <ul className="mt-4 space-y-2">
                                         {group.Links.map((link) => (
-                                            <li key={link.Text}><a target="_blank" href={link.URL}
-                                                className="text-gray-600">{link.Text}</a>
+                                            <li key={link.Text}>
+                                                <a
+                                                    href={link.URL.startsWith('#') ? link.URL : link.URL}
+                                                    target={link.URL.startsWith('#') ? '_self' : '_blank'}
+                                                    className="text-gray-600"
+                                                >
+                                                    {link.Text}
+                                                </a>
                                             </li>
                                         ))}
                                     </ul>
@@ -62,7 +68,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright Section */}
-                <div className="mt-8 pt-8 border-t pb-4 border-gray-200 dark:border-gray-700">
+                <div className="mt-8 pt-8 border-t pb-4 border-gray-700 dark:border-gray-900">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-gray-500 text-sm">{t(website.Footer.Copyright, website.Footer.Copyright)}</p>
                         <div className="mt-4 md:mt-0">

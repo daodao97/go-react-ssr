@@ -39,31 +39,21 @@ func Init() error {
 				{
 					Icon:  "twitter",
 					Title: "twitter",
-					URL:   "https://x.com",
+					URL:   "https://x.com/daodao_97",
 				},
 				{
-					Icon:  "facebook",
-					Title: "facebook",
-					URL:   "https://www.facebook.com",
-				},
-				{
-					Icon:  "instagram",
-					Title: "instagram",
-					URL:   "https://www.instagram.com",
-				},
-				{
-					Icon:  "linkedin",
-					Title: "linkedin",
-					URL:   "https://www.linkedin.com",
+					Icon:  "github",
+					Title: "github",
+					URL:   "https://github.com/daodao97",
 				},
 			},
 			Links: []LinkGroup{
 				{
 					Title: "关于",
 					Links: []Link{
-						{Text: "功能特点", URL: "/features"},
-						{Text: "案例展示", URL: "/cases"},
-						{Text: "定价", URL: "/pricing"},
+						{Text: "功能特点", URL: "#features"},
+						{Text: "FAQ", URL: "#faq"},
+						{Text: "文档", URL: "/docs"},
 					},
 				},
 				{
@@ -81,10 +71,10 @@ func Init() error {
 					},
 				},
 			},
-			Copyright: "© 2025 • ShipAny • All rights reserved",
+			Copyright: "root.footer.copyright",
 			Policy: []Link{
-				{Text: "隐私政策", URL: "/privacy"},
-				{Text: "服务条款", URL: "/terms"},
+				{Text: "root.footer.privacy", URL: "/privacy"},
+				{Text: "root.footer.terms", URL: "/terms"},
 			},
 		},
 	}

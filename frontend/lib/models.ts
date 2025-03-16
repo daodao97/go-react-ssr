@@ -13,6 +13,7 @@ declare global {
 	var WEBSITE: Record<string, any> | undefined;
 	var USER_INFO: Record<string, any> | undefined;
 	var INITIAL_PROPS: Record<string, any> | undefined;
+	var LANG: string | undefined;
 }
 
 export interface PokemonApiResponse {
