@@ -26,6 +26,7 @@ func LoadApp(r *gin.Engine) *gin.RouterGroup {
 	app.POST("/login/google", login.GoogleCallbackHandler)
 	app.POST("/login/github", login.GithubCallbackHandler)
 	app.GET("/logout", login.LogoutHandler)
+	app.POST("/upload/token", GenUploadToken)
 
 	if conf.Get().GoogleAdsTxt != "" {
 		app.GET("/ads.txt", func(c *gin.Context) {

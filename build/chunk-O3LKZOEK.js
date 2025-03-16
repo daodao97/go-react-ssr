@@ -28300,6 +28300,7 @@ export {
   p8 as p2,
   t11 as t,
   getTranslations,
+  GenIcon,
   renderPage
 };
 /*! Bundled license information:

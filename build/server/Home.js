@@ -1197,7 +1197,7 @@ var require_react_dom_development = __commonJS({
         return dispatcher;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React46 = require_react(), Internals = {
+      var React48 = require_react(), Internals = {
         d: {
           f: noop,
           r: function() {
@@ -1215,7 +1215,7 @@ var require_react_dom_development = __commonJS({
         },
         p: 0,
         findDOMNode: null
-      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React46.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
         "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
       );
@@ -2357,7 +2357,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React46.Children.forEach(children, function(child) {
+        React48.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -6592,7 +6592,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
           );
         return result;
       }
-      var React46 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
+      var React48 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
         "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), illegalAttributeNameCache = {}, validatedAttributeNameCache = {}, unitlessNumbers = new Set(
         "animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp".split(
@@ -7236,7 +7236,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React46.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -8783,7 +8783,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React46.Children.forEach(children, function(child) {
+        React48.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -12946,13 +12946,13 @@ var require_react_dom_server_browser_development = __commonJS({
         }
       }
       function ensureCorrectIsomorphicReactVersion() {
-        var isomorphicReactPackageVersion = React46.version;
+        var isomorphicReactPackageVersion = React48.version;
         if ("19.0.0" !== isomorphicReactPackageVersion)
           throw Error(
             'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.0.0\nLearn more: https://react.dev/warnings/version-mismatch")
           );
       }
-      var React46 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
+      var React48 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
       channel.port1.onmessage = function() {
         var task = taskQueue.shift();
         task && task();
@@ -13603,7 +13603,7 @@ var require_react_dom_server_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React46.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -14601,9 +14601,9 @@ var require_react_jsx_runtime_development = __commonJS({
         info || (parentType = getComponentNameFromType(parentType)) && (info = "\n\nCheck the top-level render call using <" + parentType + ">.");
         return info;
       }
-      var React46 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+      var React48 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
       Symbol.for("react.provider");
-      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React46.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
+      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
       disabledLog.__reactDisabledLog = true;
       var prefix, suffix, reentry = false;
       var componentFrameCache = new ("function" === typeof WeakMap ? WeakMap : Map)();
@@ -23348,7 +23348,7 @@ function createServerRenderer({ Component, transformProps }) {
 }
 
 // frontend/components/Home.jsx
-var import_react15 = __toESM(require_react());
+var import_react17 = __toESM(require_react());
 
 // frontend/blocks/faq/Faq.tsx
 var import_react13 = __toESM(require_react());
@@ -26075,21 +26075,389 @@ function Hero({ hero }) {
   ))), /* @__PURE__ */ import_react14.default.createElement("p", { className: "text-xl text-white/90 mb-6 max-w-3xl mx-auto" }, hero.description)));
 }
 
+// frontend/blocks/submit/GenVideo.tsx
+var import_react15 = __toESM(require_react());
+function GenVideo() {
+  const [taskType, setTaskType] = (0, import_react15.useState)("t2v");
+  const [imageFile, setImageFile] = (0, import_react15.useState)(null);
+  const [prompt, setPrompt] = (0, import_react15.useState)("");
+  const [aspectRatio, setAspectRatio] = (0, import_react15.useState)("9:16");
+  const [fileName, setFileName] = (0, import_react15.useState)("");
+  const [isSubmitting, setIsSubmitting] = (0, import_react15.useState)(false);
+  const [error, setError] = (0, import_react15.useState)("");
+  const [uploadError, setUploadError] = (0, import_react15.useState)("");
+  const [quantity, setQuantity] = (0, import_react15.useState)("2");
+  const [imageUrl, setImageUrl] = (0, import_react15.useState)("");
+  const fileInputRef = (0, import_react15.useRef)(null);
+  const imgRef = (0, import_react15.useRef)(null);
+  const handleFileChange = (event) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setFileName(file.name);
+      setImageFile(file);
+      setImageUrl("");
+      setError("");
+      setUploadError("");
+      const fileType = file.type;
+      if (!fileType.match("image/jpeg") && !fileType.match("image/png") && !fileType.match("image/jpg")) {
+        setUploadError("\u53EA\u652F\u6301JPG\u548CPNG\u683C\u5F0F\u7684\u56FE\u7247");
+        setFileName("");
+        setImageFile(null);
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        setUploadError("\u56FE\u7247\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC710MB");
+        setFileName("");
+        setImageFile(null);
+        return;
+      }
+      const formData = new FormData();
+      formData.append("file", file);
+      setIsSubmitting(true);
+      fetch("/upload/token", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }).then((response) => {
+        if (response.status === 401) {
+          window.location.href = "/login";
+          throw new Error("Please login first");
+        }
+        return response.json();
+      }).then((tokenData) => {
+        console.log(tokenData);
+        if (!tokenData.success) {
+          throw new Error(tokenData.message || "Get upload token failed");
+        }
+        formData.append("token", tokenData.token);
+        return fetch("https://file.wanx.space/", {
+          method: "POST",
+          headers: {
+            "Upload-Token": tokenData.token
+          },
+          body: formData
+        });
+      }).then((response) => {
+        if (!response.ok) {
+          return response.json().then((data) => {
+            throw new Error(data.error || "Something went wrong");
+          });
+        }
+        return response.json();
+      }).then((data) => {
+        console.log(data);
+        if (data.success) {
+          setImageUrl(data.url);
+        } else {
+          throw new Error(data.message || "Upload failed, please try again1");
+        }
+        setIsSubmitting(false);
+      }).catch((error2) => {
+        setUploadError("\u6587\u4EF6\u4E0A\u4F20\u5931\u8D25: " + error2.message);
+        setIsSubmitting(false);
+        setImageFile(null);
+        setFileName("");
+      });
+    }
+  };
+  const submitTask = () => {
+    setIsSubmitting(true);
+    setError("");
+    if (taskType === "i2v" && imageFile) {
+      if (imageUrl) {
+        sendRequest(imageUrl);
+      } else {
+        setIsSubmitting(false);
+        setError("\u8BF7\u7B49\u5F85\u56FE\u7247\u4E0A\u4F20\u5B8C\u6210\u6216\u91CD\u65B0\u4E0A\u4F20");
+      }
+    } else {
+      sendRequest();
+    }
+  };
+  const sendRequest = (imageUrl2 = null) => {
+    const requestData = {
+      type: taskType,
+      prompt,
+      aspect_ratio: aspectRatio
+    };
+    if (taskType === "t2v") {
+      requestData.aspectRatio = aspectRatio;
+    } else if (imageUrl2) {
+      requestData.image = imageUrl2;
+    }
+    fetch("/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(requestData)
+    }).then((response) => {
+      if (!response.ok) {
+        return response.json().then((data) => {
+          throw new Error(data.error || "Something went wrong");
+        });
+      }
+      return response.json();
+    }).then((data) => {
+      setIsSubmitting(false);
+      setPrompt("");
+      setImageFile(null);
+      setFileName("");
+      setImageUrl("");
+      setAspectRatio("9:16");
+      setTaskType("t2v");
+      setError("");
+      window.location.href = "/generate#history";
+    }).catch((error2) => {
+      setIsSubmitting(false);
+      setError("\u4EFB\u52A1\u63D0\u4EA4\u5931\u8D25: " + error2.message);
+    });
+  };
+  const resetUpload = () => {
+    setImageUrl("");
+    setImageFile(null);
+    setFileName("");
+    setUploadError("");
+    setError("");
+  };
+  const handleImageLoad = (e15) => {
+    const prevSibling = e15.currentTarget.previousElementSibling;
+    if (prevSibling) {
+      prevSibling.style.display = "none";
+    }
+  };
+  const handleImageError = (e15) => {
+    const prevSibling = e15.currentTarget.previousElementSibling;
+    if (prevSibling) {
+      prevSibling.style.display = "none";
+    }
+    e15.currentTarget.src = "https://placehold.co/400x300/3730a3/ffffff?text=\u52A0\u8F7D\u5931\u8D25";
+  };
+  const handleRecharge = () => {
+    window.location.href = `https://pay.wanx.space/checkout?app_id=wanx.space&user_id=${userInfo?.UserID}&email=${userInfo?.Email}&price_id=price_1QySl7AJMSmBVDIMPwxJHbZT&callback_url=https://wanx.space&quantity=${quantity}`;
+  };
+  const isLogin = true;
+  const userInfo = { UserID: "123", Email: "user@example.com" };
+  const balance = "500";
+  return /* @__PURE__ */ import_react15.default.createElement("div", { className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 shadow-xl" }, /* @__PURE__ */ import_react15.default.createElement("h2", { className: "text-2xl font-semibold text-white mb-6" }, "Generate By Wanx 2.1"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "mb-6" }, /* @__PURE__ */ import_react15.default.createElement("label", { className: "block text-sm font-medium text-white/80 mb-2" }, "Task Type"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex space-x-4" }, /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: () => setTaskType("t2v"),
+      className: `px-4 py-2 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${taskType === "t2v" ? "bg-indigo-600 text-white" : "bg-white/10 text-white/80 hover:bg-white/20"}`
+    },
+    "Text To Video"
+  ), /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: () => setTaskType("i2v"),
+      className: `px-4 py-2 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${taskType === "i2v" ? "bg-indigo-600 text-white" : "bg-white/10 text-white/80 hover:bg-white/20"}`
+    },
+    "Image To Video"
+  ))), taskType === "i2v" && /* @__PURE__ */ import_react15.default.createElement("div", { className: "mb-6" }, /* @__PURE__ */ import_react15.default.createElement("label", { className: "block text-sm font-medium text-white/80 mb-2" }, "\u4E0A\u4F20\u56FE\u7247"), /* @__PURE__ */ import_react15.default.createElement(
+    "div",
+    {
+      className: `relative border-2 border-dashed rounded-xl p-6 text-center transition-colors duration-200 hover:border-indigo-400 ${fileName && !uploadError ? "border-indigo-500 bg-indigo-500/10" : uploadError ? "border-red-500 bg-red-500/10" : "border-white/20"}`
+    },
+    /* @__PURE__ */ import_react15.default.createElement(
+      "input",
+      {
+        ref: fileInputRef,
+        type: "file",
+        accept: "image/*",
+        className: "absolute inset-0 w-full h-full opacity-0 cursor-pointer",
+        onChange: handleFileChange,
+        disabled: isSubmitting
+      }
+    ),
+    !fileName && !isSubmitting && !uploadError && /* @__PURE__ */ import_react15.default.createElement("div", null, /* @__PURE__ */ import_react15.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", className: "mx-auto h-12 w-12 text-white/40", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor" }, /* @__PURE__ */ import_react15.default.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "1.5", d: "M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" })), /* @__PURE__ */ import_react15.default.createElement("p", { className: "mt-2 text-sm text-white/60" }, "Drop or click to upload"), /* @__PURE__ */ import_react15.default.createElement("p", { className: "text-xs text-white/40 mt-1" }, "Support JPG, PNG format")),
+    isSubmitting && !imageUrl && /* @__PURE__ */ import_react15.default.createElement("div", { className: "text-white flex flex-col items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("svg", { className: "animate-spin h-10 w-10 text-indigo-400 mb-2", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24" }, /* @__PURE__ */ import_react15.default.createElement("circle", { className: "opacity-25", cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeWidth: "4" }), /* @__PURE__ */ import_react15.default.createElement("path", { className: "opacity-75", fill: "currentColor", d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" })), /* @__PURE__ */ import_react15.default.createElement("p", { className: "text-sm text-white/60" }, "Uploading...")),
+    fileName && !isSubmitting && !uploadError && /* @__PURE__ */ import_react15.default.createElement("div", { className: "text-white flex items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", className: "h-5 w-5 mr-2 text-indigo-300", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor" }, /* @__PURE__ */ import_react15.default.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M5 13l4 4L19 7" })), /* @__PURE__ */ import_react15.default.createElement("span", { className: "truncate max-w-xs" }, fileName)),
+    uploadError && /* @__PURE__ */ import_react15.default.createElement("div", { className: "text-red-400 flex flex-col items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", className: "h-8 w-8 mb-2", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor" }, /* @__PURE__ */ import_react15.default.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: "2", d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" })), /* @__PURE__ */ import_react15.default.createElement("p", { className: "text-sm" }, uploadError), /* @__PURE__ */ import_react15.default.createElement(
+      "button",
+      {
+        onClick: resetUpload,
+        className: "mt-2 px-3 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 text-xs rounded-md transition-colors"
+      },
+      "\u91CD\u65B0\u4E0A\u4F20"
+    )),
+    imageUrl && /* @__PURE__ */ import_react15.default.createElement("div", { className: "mt-4 text-sm text-indigo-300" }, /* @__PURE__ */ import_react15.default.createElement("p", { className: "font-medium" }, "File uploaded successfully"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "mt-3 relative" }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "w-full h-full absolute inset-0 flex items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("svg", { className: "animate-spin h-8 w-8 text-indigo-400", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24" }, /* @__PURE__ */ import_react15.default.createElement("circle", { className: "opacity-25", cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeWidth: "4" }), /* @__PURE__ */ import_react15.default.createElement("path", { className: "opacity-75", fill: "currentColor", d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" }))), /* @__PURE__ */ import_react15.default.createElement(
+      "img",
+      {
+        ref: imgRef,
+        src: imageUrl,
+        className: "max-h-48 sm:max-h-64 max-w-full mx-auto rounded-lg border border-indigo-500/30 shadow-lg object-contain bg-black/20",
+        alt: "\u9884\u89C8\u56FE\u7247",
+        onLoad: handleImageLoad,
+        onError: handleImageError
+      }
+    )), /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex items-center justify-between mt-3" }, /* @__PURE__ */ import_react15.default.createElement(
+      "button",
+      {
+        onClick: resetUpload,
+        className: "text-xs text-red-400 hover:text-red-300 transition-colors"
+      },
+      "Upload again"
+    )))
+  )), /* @__PURE__ */ import_react15.default.createElement("div", { className: "mb-6" }, /* @__PURE__ */ import_react15.default.createElement("label", { htmlFor: "prompt", className: "block text-sm font-medium text-white/80 mb-2" }, "Prompt"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "relative" }, /* @__PURE__ */ import_react15.default.createElement(
+    "textarea",
+    {
+      id: "prompt",
+      value: prompt,
+      onChange: (e15) => setPrompt(e15.target.value),
+      rows: 3,
+      className: "w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200",
+      placeholder: "Describe the content you want to generate..."
+    }
+  ), /* @__PURE__ */ import_react15.default.createElement("div", { className: "absolute bottom-3 right-3 text-xs text-white/40" }, prompt.length, "/500"))), taskType === "t2v" && /* @__PURE__ */ import_react15.default.createElement("div", { className: "mb-8" }, /* @__PURE__ */ import_react15.default.createElement("label", { className: "block text-sm font-medium text-white/80 mb-2" }, "Video Ratio"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex space-x-4" }, /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: () => setAspectRatio("9:16"),
+      className: `flex-1 px-4 py-3 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${aspectRatio === "9:16" ? "bg-indigo-600 text-white" : "bg-white/10 text-white/80 hover:bg-white/20"}`
+    },
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "w-4 h-7 bg-current opacity-60 rounded" }), /* @__PURE__ */ import_react15.default.createElement("span", { className: "ml-2" }, "9:16 Vertical"))
+  ), /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: () => setAspectRatio("16:9"),
+      className: `flex-1 px-4 py-3 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${aspectRatio === "16:9" ? "bg-indigo-600 text-white" : "bg-white/10 text-white/80 hover:bg-white/20"}`
+    },
+    /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex items-center justify-center" }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "w-7 h-4 bg-current opacity-60 rounded" }), /* @__PURE__ */ import_react15.default.createElement("span", { className: "ml-2" }, "16:9 Horizontal"))
+  ))), /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex flex-col sm:flex-row justify-between gap-4" }, isLogin && /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 order-2 sm:order-first w-full sm:w-auto" }, /* @__PURE__ */ import_react15.default.createElement("div", { className: "w-full sm:w-auto flex items-center px-4 py-2 bg-white/10 text-white font-medium rounded-xl border border-white/20 shadow-md" }, /* @__PURE__ */ import_react15.default.createElement("span", { className: "text-white/70 text-sm mr-1" }, "$10 = 1000 credits"), /* @__PURE__ */ import_react15.default.createElement("span", { className: "text-white/70 text-sm mx-1" }, "\xD7"), /* @__PURE__ */ import_react15.default.createElement("div", { className: "relative inline-block" }, /* @__PURE__ */ import_react15.default.createElement(
+    "select",
+    {
+      value: quantity,
+      onChange: (e15) => setQuantity(e15.target.value),
+      className: "appearance-none bg-white/10 text-indigo-300 font-semibold rounded px-2 py-1 pr-6 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+    },
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => /* @__PURE__ */ import_react15.default.createElement("option", { key: num, value: num.toString() }, num))
+  ), /* @__PURE__ */ import_react15.default.createElement("div", { className: "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white/70" }, /* @__PURE__ */ import_react15.default.createElement("svg", { className: "fill-current h-4 w-4", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20" }, /* @__PURE__ */ import_react15.default.createElement("path", { d: "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" })))), /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: handleRecharge,
+      className: "ml-2 px-2 py-1 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition-colors duration-200"
+    },
+    "Recharge"
+  )), /* @__PURE__ */ import_react15.default.createElement("div", { className: "w-full sm:w-auto flex items-center px-4 py-2 bg-white/10 text-white font-medium rounded-xl border border-white/20 shadow-md" }, /* @__PURE__ */ import_react15.default.createElement("span", { className: "text-white/70 text-sm mr-1" }, "Credits:"), /* @__PURE__ */ import_react15.default.createElement("span", { className: "text-indigo-300 font-semibold" }, balance))), error && /* @__PURE__ */ import_react15.default.createElement("div", { className: "text-red-500 text-sm px-4 order-1" }, /* @__PURE__ */ import_react15.default.createElement("span", null, error)), /* @__PURE__ */ import_react15.default.createElement(
+    "button",
+    {
+      onClick: isLogin ? submitTask : () => window.location.href = "/login",
+      disabled: isSubmitting || taskType === "i2v" && !imageFile || !prompt,
+      className: `w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 h-12 flex items-center justify-center order-3 sm:order-last ${isSubmitting || taskType === "i2v" && !imageFile || !prompt ? "opacity-50 cursor-not-allowed" : ""}`
+    },
+    !isSubmitting ? /* @__PURE__ */ import_react15.default.createElement("span", null, "Generate") : /* @__PURE__ */ import_react15.default.createElement("span", { className: "flex items-center" }, /* @__PURE__ */ import_react15.default.createElement("svg", { className: "animate-spin -ml-1 mr-2 h-4 w-4 text-white", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24" }, /* @__PURE__ */ import_react15.default.createElement("circle", { className: "opacity-25", cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeWidth: "4" }), /* @__PURE__ */ import_react15.default.createElement("path", { className: "opacity-75", fill: "currentColor", d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" })), "Generating...")
+  )), /* @__PURE__ */ import_react15.default.createElement("div", { className: "text-sm text-white/80 mt-4" }, /* @__PURE__ */ import_react15.default.createElement("p", null, "Video generation takes 2-3 minutes, please be patient"))));
+}
+
+// frontend/blocks/feature/Feature1.tsx
+var import_react16 = __toESM(require_react());
+var Feature1 = ({
+  title,
+  description,
+  imageUrl,
+  imageAlt = "\u7279\u6027\u5C55\u793A",
+  isReversed = false,
+  features = []
+}) => {
+  return /* @__PURE__ */ import_react16.default.createElement("div", { className: "py-16" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "container mx-auto px-4" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: `flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-12` }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "relative rounded-lg overflow-hidden shadow-lg" }, /* @__PURE__ */ import_react16.default.createElement(
+    "img",
+    {
+      src: imageUrl,
+      alt: imageAlt,
+      width: 600,
+      height: 400,
+      className: "w-full h-auto object-cover",
+      onError: (e15) => {
+        e15.currentTarget.onerror = null;
+        e15.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%236b7280'%3E\u56FE\u7247\u52A0\u8F7D\u5931\u8D25%3C/text%3E%3C/svg%3E";
+        const imgElement = e15.currentTarget;
+        imgElement.classList.add("bg-gray-100", "border", "border-gray-200");
+      }
+    }
+  ))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react16.default.createElement("h2", { className: "text-3xl font-bold mb-4" }, title), /* @__PURE__ */ import_react16.default.createElement("p", { className: "text-gray-600 mb-8" }, description), features.length > 0 && /* @__PURE__ */ import_react16.default.createElement("div", { className: "space-y-6" }, features.map((feature, index2) => /* @__PURE__ */ import_react16.default.createElement("div", { key: index2, className: "flex items-start gap-4" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "flex-shrink-0 text-primary" }, feature.icon), /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h3", { className: "font-semibold text-lg" }, feature.title), /* @__PURE__ */ import_react16.default.createElement("p", { className: "text-gray-500" }, feature.description)))))))));
+};
+
+// node_modules/react-icons/fi/index.mjs
+function FiBox(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "path", "attr": { "d": "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }, "child": [] }, { "tag": "polyline", "attr": { "points": "3.27 6.96 12 12.01 20.73 6.96" }, "child": [] }, { "tag": "line", "attr": { "x1": "12", "y1": "22.08", "x2": "12", "y2": "12" }, "child": [] }] })(props);
+}
+function FiCloud(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "path", "attr": { "d": "M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" }, "child": [] }] })(props);
+}
+function FiSettings(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "circle", "attr": { "cx": "12", "cy": "12", "r": "3" }, "child": [] }, { "tag": "path", "attr": { "d": "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" }, "child": [] }] })(props);
+}
+
 // frontend/components/Home.jsx
 function Home({ message = "", initialCount = 0 }) {
-  const [count3, setCount] = (0, import_react15.useState)(initialCount);
-  const [currentMessage, setCurrentMessage] = (0, import_react15.useState)(message);
-  const increment = (0, import_react15.useCallback)(() => setCount(count3 + 1), [count3]);
-  const decrement = (0, import_react15.useCallback)(() => setCount(count3 - 1), [count3]);
+  const [count3, setCount] = (0, import_react17.useState)(initialCount);
+  const [currentMessage, setCurrentMessage] = (0, import_react17.useState)(message);
+  const increment = (0, import_react17.useCallback)(() => setCount(count3 + 1), [count3]);
+  const decrement = (0, import_react17.useCallback)(() => setCount(count3 - 1), [count3]);
   const faqs = getTranslations("home.faq", {});
   const hero = getTranslations("home.hero", {});
   console.log(faqs);
-  (0, import_react15.useEffect)(() => {
+  (0, import_react17.useEffect)(() => {
     setTimeout(() => {
       setCurrentMessage("Message updated after first render");
     }, 1e3);
   }, []);
-  return /* @__PURE__ */ import_react15.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react15.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react15.default.createElement(Faq, { faqs }));
+  const featureProps = [
+    {
+      title: "\u4EC0\u4E48\u662F Go React SSR",
+      description: "Go React SSR \u662F\u4E00\u4E2A\u7528\u4E8E\u6784\u5EFA AI SaaS \u521B\u4E1A\u9879\u76EE\u7684 NextJS \u6A21\u677F\uFF0C\u5185\u7F6E\u591A\u79CD\u6A21\u677F\u548C\u7EC4\u4EF6\u3002",
+      imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+      imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
+      features: [
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
+        },
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiSettings, { size: 24 }),
+          title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
+          description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
+        },
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiCloud, { size: 24 }),
+          title: "\u5FEB\u901F\u90E8\u7F72",
+          description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
+        }
+      ]
+    },
+    {
+      title: "\u4EC0\u4E48\u662F Go React SSR",
+      description: "Go React SSR \u662F\u4E00\u4E2A\u7528\u4E8E\u6784\u5EFA AI SaaS \u521B\u4E1A\u9879\u76EE\u7684 NextJS \u6A21\u677F\uFF0C\u5185\u7F6E\u591A\u79CD\u6A21\u677F\u548C\u7EC4\u4EF6\u3002",
+      imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+      imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
+      features: [
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
+        },
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiSettings, { size: 24 }),
+          title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
+          description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
+        },
+        {
+          icon: /* @__PURE__ */ import_react17.default.createElement(FiCloud, { size: 24 }),
+          title: "\u5FEB\u901F\u90E8\u7F72",
+          description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
+        }
+      ]
+    }
+  ];
+  return /* @__PURE__ */ import_react17.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react17.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react17.default.createElement(GenVideo, null), featureProps.map((feature, index2) => /* @__PURE__ */ import_react17.default.createElement(
+    Feature1,
+    {
+      key: index2,
+      ...feature,
+      isReversed: index2 % 2 === 1
+    }
+  )), /* @__PURE__ */ import_react17.default.createElement(Faq, { faqs }));
 }
 
 // frontend/server/Home.jsx
