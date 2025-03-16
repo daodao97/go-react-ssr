@@ -23292,7 +23292,7 @@ function Footer() {
       className: "text-gray-600"
     },
     link.Text
-  ))))))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 pt-8 border-t border-gray-700 dark:border-gray-200" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "text-gray-500 text-sm" }, t9(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react10.default.createElement(
+  ))))))))), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-8 pt-8 border-t pb-4 border-gray-200 dark:border-gray-700" }, /* @__PURE__ */ import_react10.default.createElement("div", { className: "flex flex-col md:flex-row justify-between items-center" }, /* @__PURE__ */ import_react10.default.createElement("p", { className: "text-gray-500 text-sm" }, t9(website.Footer.Copyright, website.Footer.Copyright)), /* @__PURE__ */ import_react10.default.createElement("div", { className: "mt-4 md:mt-0" }, website.Footer.Policy?.map((policy, index2) => /* @__PURE__ */ import_react10.default.createElement(import_react10.default.Fragment, { key: policy.URL }, /* @__PURE__ */ import_react10.default.createElement(
     "a",
     {
       href: policy.URL,

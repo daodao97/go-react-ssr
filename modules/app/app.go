@@ -16,15 +16,12 @@ func LoadApp(r *gin.Engine) *gin.RouterGroup {
 	app.Use(gzip.Gzip(gzip.DefaultCompression))
 	app.Use(i18n.I18nMiddleware())
 
-	groups := append([]string{""}, i18n.SupportedLanguages...)
-
-	for _, lang := range groups {
-		group := app.Group("/" + lang)
+	registerMultiLangRoutes(app, func(group *gin.RouterGroup) {
 		group.GET("", IndexPage)
 		group.GET("/about", AboutPage)
 		group.GET("/terms", Terms)
 		group.GET("/privacy", Privacy)
-	}
+	})
 
 	app.POST("/login/google", login.GoogleCallbackHandler)
 	app.POST("/login/github", login.GithubCallbackHandler)
@@ -37,6 +34,15 @@ func LoadApp(r *gin.Engine) *gin.RouterGroup {
 	}
 
 	return app
+}
+
+func registerMultiLangRoutes(app *gin.RouterGroup, registerRoutes func(group *gin.RouterGroup)) {
+	groups := append([]string{""}, i18n.SupportedLanguages...)
+
+	for _, lang := range groups {
+		group := app.Group("/" + lang)
+		registerRoutes(group)
+	}
 }
 
 // AboutPage 关于页面
