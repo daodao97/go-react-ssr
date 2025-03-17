@@ -63,7 +63,6 @@ export function GenVideo() {
                     return response.json();
                 })
                 .then(tokenData => {
-                    console.log(tokenData);
                     if (!tokenData.success) {
                         throw new Error(tokenData.message || 'Get upload token failed');
                     }

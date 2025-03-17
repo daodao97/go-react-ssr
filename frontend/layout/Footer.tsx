@@ -47,7 +47,7 @@ export function Footer() {
                             {/* Column 1 */}
                             {website.Footer.Links.map((group) => (
                                 <div key={group.Title} className="text-center md:text-right min-w-max px-3">
-                                    <h3 className="text-white font-medium">{t(group.Title, group.Title)}</h3>
+                                    <h2 className="text-white font-medium">{t(group.Title, group.Title)}</h2>
                                     <ul className="mt-4 space-y-2">
                                         {group.Links.map((link) => (
                                             <li key={link.Text}>

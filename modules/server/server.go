@@ -2,6 +2,7 @@ package server
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/daodao97/xgo/xapp"
 	"github.com/gin-contrib/cors"
@@ -10,6 +11,7 @@ import (
 	"github.com/highercomve/go-react-ssr/modules/conf"
 	"github.com/highercomve/go-react-ssr/modules/dao"
 	"github.com/highercomve/go-react-ssr/modules/lib/i18n"
+	"github.com/kataras/sitemap"
 )
 
 func Start(commit string, tag string) {
@@ -81,6 +83,19 @@ func h() http.Handler {
 
 	// 加载应用路由
 	app.LoadApp(r)
+
+	r.GET("/robots.txt", func(c *gin.Context) {
+		c.String(http.StatusOK, "User-agent: *\nAllow: /\nDisallow: /assets\nDisallow: /static\n")
+	})
+	r.GET("/sitemap.xml", func(c *gin.Context) {
+		sm := sitemap.New("https://go-react-ssr.com")
+		sm.URL(sitemap.URL{
+			Loc:        "/",
+			LastMod:    time.Now(),
+			ChangeFreq: sitemap.Daily,
+		})
+		c.XML(http.StatusOK, sm.Build()[0])
+	})
 
 	return r
 }

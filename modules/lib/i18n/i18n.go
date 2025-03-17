@@ -136,7 +136,7 @@ func GetLang(ctx *gin.Context) string {
 	return lang
 }
 
-func Get(ctx *gin.Context, path string, defaultValue string) string {
+func GetWithDefault(ctx *gin.Context, path string, defaultValue string) string {
 	lang := GetLang(ctx)
 
 	val := gjson.GetBytes(translate[lang], path).String()
@@ -145,6 +145,10 @@ func Get(ctx *gin.Context, path string, defaultValue string) string {
 	}
 
 	return val
+}
+
+func Get(ctx *gin.Context, path string) string {
+	return GetWithDefault(ctx, path, "")
 }
 
 func GetTranslations(ctx *gin.Context) map[string]any {

@@ -4,7 +4,7 @@ import {
   getTranslations,
   renderPage,
   require_react
-} from "../chunk-O3LKZOEK.js";
+} from "../chunk-53SHEZ4G.js";
 import {
   __toESM
 } from "../chunk-U67V476Y.js";
@@ -15,7 +15,7 @@ var import_react5 = __toESM(require_react());
 // frontend/blocks/faq/Faq.tsx
 var import_react = __toESM(require_react());
 function Faq({ faqs }) {
-  return /* @__PURE__ */ import_react.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "text-center mb-12", id: faqs.anchor }, faqs.tips && /* @__PURE__ */ import_react.default.createElement("span", { className: "inline-block bg-amber-500 px-3 py-1 rounded-full text-sm font-medium mb-4" }, faqs.tips), /* @__PURE__ */ import_react.default.createElement("h1", { className: "text-3xl font-bold sm:text-4xl mb-4" }, faqs.title), faqs.subtitle && /* @__PURE__ */ import_react.default.createElement("p", { className: "max-w-2xl mx-auto " }, faqs.subtitle)), /* @__PURE__ */ import_react.default.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" }, (faqs.list || []).map((faq, index) => /* @__PURE__ */ import_react.default.createElement("div", { key: index, className: "bg-gray-900 rounded-lg shadow-sm p-6 relative" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "flex items-start" }, /* @__PURE__ */ import_react.default.createElement(e, { color: "orange", className: "mr-2" }, index + 1), /* @__PURE__ */ import_react.default.createElement("div", null, /* @__PURE__ */ import_react.default.createElement("h2", { className: "text-lg font-medium text-gray-100 mb-2" }, faq.question), /* @__PURE__ */ import_react.default.createElement("p", { className: "text-gray-400" }, faq.answer)))))));
+  return /* @__PURE__ */ import_react.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "text-center mb-12", id: faqs.anchor }, faqs.tips && /* @__PURE__ */ import_react.default.createElement("span", { className: "inline-block bg-amber-500 px-3 py-1 rounded-full text-sm font-medium mb-4" }, faqs.tips), /* @__PURE__ */ import_react.default.createElement("h2", { className: "text-3xl font-bold sm:text-4xl mb-4" }, faqs.title), faqs.subtitle && /* @__PURE__ */ import_react.default.createElement("p", { className: "max-w-2xl mx-auto " }, faqs.subtitle)), /* @__PURE__ */ import_react.default.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" }, (faqs.list || []).map((faq, index) => /* @__PURE__ */ import_react.default.createElement("div", { key: index, className: "bg-gray-900 rounded-lg shadow-sm p-6 relative" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "flex flex-col items-start" }, /* @__PURE__ */ import_react.default.createElement("div", { className: "flex flex-row items-center" }, /* @__PURE__ */ import_react.default.createElement(e, { color: "orange", className: "mr-2 flex items-center" }, index + 1), /* @__PURE__ */ import_react.default.createElement("h3", { className: "text-lg font-medium text-gray-100 mb-0" }, faq.question)), /* @__PURE__ */ import_react.default.createElement("p", { className: "text-gray-400" }, faq.answer))))));
 }
 
 // frontend/blocks/hero/Hero.tsx
@@ -2788,7 +2788,6 @@ function GenVideo() {
         }
         return response.json();
       }).then((tokenData) => {
-        console.log(tokenData);
         if (!tokenData.success) {
           throw new Error(tokenData.message || "Get upload token failed");
         }
@@ -3058,7 +3057,6 @@ function Home({ message = "", initialCount = 0 }) {
   const decrement = (0, import_react5.useCallback)(() => setCount(count - 1), [count]);
   const faqs = getTranslations("home.faq", {});
   const hero = getTranslations("home.hero", {});
-  console.log(faqs);
   (0, import_react5.useEffect)(() => {
     setTimeout(() => {
       setCurrentMessage("Message updated after first render");

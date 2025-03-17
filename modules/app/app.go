@@ -56,24 +56,66 @@ func AboutPage(c *gin.Context) {
 // IndexPage 首页
 func IndexPage(c *gin.Context) {
 	data := map[string]interface{}{
-		"message":      i18n.Get(c, "messages.welcome", "Welcome from the server1"),
+		"message":      i18n.GetWithDefault(c, "messages.welcome", "Welcome from the server1"),
 		"initialCount": 100,
 	}
 
 	head := &model.Head{
-		Title: "Go React SSR",
+		Title: "Go React SSR - 高性能的服务端渲染React框架 | 快速开发Web应用",
 		Meta: []model.Meta{
 			{
 				Name:    "description",
-				Content: i18n.Get(c, "home.head.description", "Go React SSR is a framework for building server-side rendered React applications using Go."),
+				Content: i18n.Get(c, "home.head.description"),
 			},
 			{
 				Name:    "keywords",
-				Content: i18n.Get(c, "home.head.keywords", "Go React SSR"),
+				Content: i18n.Get(c, "home.head.keywords"),
 			},
 			{
 				Name:    "author",
-				Content: i18n.Get(c, "home.head.author", "daodao97"),
+				Content: i18n.Get(c, "home.head.author"),
+			},
+			// Open Graph 标签 (Facebook, LinkedIn等)
+			{
+				Property: "og:title",
+				Content:  i18n.Get(c, "home.head.og.title"),
+			},
+			{
+				Property: "og:description",
+				Content:  i18n.Get(c, "home.head.og.description"),
+			},
+			{
+				Property: "og:type",
+				Content:  "website",
+			},
+			{
+				Property: "og:url",
+				Content:  i18n.Get(c, "home.head.og.url"),
+			},
+			{
+				Property: "og:image",
+				Content:  i18n.Get(c, "home.head.og.image"),
+			},
+			// Twitter 卡片标签
+			{
+				Name:    "twitter:card",
+				Content: i18n.Get(c, "home.head.twitter.card"),
+			},
+			{
+				Name:    "twitter:site",
+				Content: i18n.Get(c, "home.head.twitter.site"),
+			},
+			{
+				Name:    "twitter:title",
+				Content: i18n.Get(c, "home.head.twitter.title"),
+			},
+			{
+				Name:    "twitter:description",
+				Content: i18n.Get(c, "home.head.twitter.description"),
+			},
+			{
+				Name:    "twitter:image",
+				Content: i18n.Get(c, "home.head.twitter.image"),
 			},
 		},
 		Link: []model.Link{

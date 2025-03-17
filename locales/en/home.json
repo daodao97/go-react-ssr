@@ -5,7 +5,20 @@
         "title": "Go React SSR: Build Server-Side Rendered Apps",
         "description": "Learn to build server-side rendered applications using Go and React. Step-by-step guide to set up a Go server and integrate it with React for optimal performance.",
         "keywords": "Go React SSR, Server Side Rendering, React Go Integration, Web Development, Performance Optimization",
-        "author": "daodao97!"
+        "author": "daodao97!",
+        "og": {
+            "title": "Go React SSR: Build Server-Side Rendered Apps",
+            "description": "Learn to build server-side rendered applications using Go and React. Step-by-step guide to set up a Go server and integrate it with React for optimal performance.",
+            "url": "https://www.example.com",
+            "image": "https://www.example.com/images/og-image.jpg"
+        },
+        "twitter": {
+            "title": "Go React SSR: Build Server-Side Rendered Apps",
+            "description": "Learn to build server-side rendered applications using Go and React. Step-by-step guide to set up a Go server and integrate it with React for optimal performance.",
+            "image": "https://www.example.com/images/twitter-image.jpg",
+            "card": "summary_large_image",
+            "site": "@daodao97"
+        }
     },
     "hero": {
         "title": "Go React SSR: Build Server-Side Rendered Apps",

@@ -9,10 +9,9 @@
     {{ with .Head }}
     <title>{{ .Title }}</title>
     {{ range .Meta }}
-    {{ if eq .Property "" }}
-    <meta name="{{ .Name }}" content="{{ .Content }}" />
-    {{ else }}
-    <meta property="{{ .Property }}" content="{{ .Content }}" />
+    {{ if ne .Content "" }}
+    <meta {{ if ne .Name "" }}name="{{ .Name }}" {{ end }} {{ if ne .Property "" }}property="{{ .Property }}" {{ end }}
+        content="{{ .Content }}" />
     {{ end }}
     {{ end }}
     {{ range .Link }}
