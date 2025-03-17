@@ -80,7 +80,7 @@ export function Header() {
     };
 
     return (
-        <nav className="top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg">
+        <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="md:!hidden flex justify-between h-16 items-center px-4">
                     <div className="flex-shrink-0 flex items-center">

@@ -23026,7 +23026,7 @@ function Header() {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-  return /* @__PURE__ */ import_react8.default.createElement("nav", { className: "top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "md:!hidden flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react8.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react8.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t8(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex items-center" }, /* @__PURE__ */ import_react8.default.createElement(o9, { variant: "outline", color: "gray", onClick: toggleMobileMenu }, /* @__PURE__ */ import_react8.default.createElement(HamburgerMenuIcon, null)))), mobileMenuOpen && /* @__PURE__ */ import_react8.default.createElement("div", { className: "md:hidden bg-black shadow-lg fixed left-0 right-0 z-50 py-4 px-6" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex flex-col space-y-4" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react8.default.createElement(
+  return /* @__PURE__ */ import_react8.default.createElement("nav", { className: "sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "md:!hidden flex justify-between h-16 items-center px-4" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex-shrink-0 flex items-center" }, /* @__PURE__ */ import_react8.default.createElement("a", { href: "/", className: "flex items-center" }, website.Header.Logo && /* @__PURE__ */ import_react8.default.createElement("img", { src: website.Header.Logo, alt: "logo", className: "h-8 w-8" }), /* @__PURE__ */ import_react8.default.createElement("span", { className: "ml-2 text-xl font-bold text-amber-600" }, t8(website.Header.Title, website.Header.Title)))), /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex items-center" }, /* @__PURE__ */ import_react8.default.createElement(o9, { variant: "outline", color: "gray", onClick: toggleMobileMenu }, /* @__PURE__ */ import_react8.default.createElement(HamburgerMenuIcon, null)))), mobileMenuOpen && /* @__PURE__ */ import_react8.default.createElement("div", { className: "md:hidden bg-black shadow-lg fixed left-0 right-0 z-50 py-4 px-6" }, /* @__PURE__ */ import_react8.default.createElement("div", { className: "flex flex-col space-y-4" }, website.Header.Nav.map((nav) => /* @__PURE__ */ import_react8.default.createElement(
     "a",
     {
       key: nav.Text,
@@ -23311,7 +23311,9 @@ function MyTheme({
   }
   return /* @__PURE__ */ import_react12.default.createElement(
     R2,
-    null,
+    {
+      ...themeConfig
+    },
     /* @__PURE__ */ import_react12.default.createElement(LoginModalContainer, null),
     /* @__PURE__ */ import_react12.default.createElement("div", { className: "flex flex-col min-h-screen h-screen bg-gray-900" }, /* @__PURE__ */ import_react12.default.createElement(Header, null), /* @__PURE__ */ import_react12.default.createElement("main", { className: "flex-grow" }, children), /* @__PURE__ */ import_react12.default.createElement(Footer, null))
   );

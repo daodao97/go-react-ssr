@@ -24,6 +24,7 @@ export function Home({ message = "", initialCount = 0 }) {
 
 	const hero = getTranslations("home.hero", {})
 
+
 	useEffect(() => {
 		setTimeout(() => {
 			setCurrentMessage("Message updated after first render");

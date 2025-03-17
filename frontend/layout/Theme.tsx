@@ -24,6 +24,7 @@ export function MyTheme({
     }
     return (
         <Theme
+            {...themeConfig}
         >
             <LoginModalContainer />
             <div className="flex flex-col min-h-screen h-screen bg-gray-900">
