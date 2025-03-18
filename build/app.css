@@ -1,31 +1,4 @@
 /* frontend/css/app.css */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.slide-right {
-  animation: slideInRight 0.5s ease-out;
-}
-.slide-left {
-  animation: slideInLeft 0.5s ease-out;
-}
-
 /* frontend/css/tailwind.css */
 *,
 ::before,
@@ -1506,6 +1479,34 @@ video {
     --tw-bg-opacity: 1;
     background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
   }
+}
+
+/* frontend/blocks/feature/Feature2.css */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-right {
+  animation: slideInRight 0.5s ease-out;
+}
+.slide-left {
+  animation: slideInLeft 0.5s ease-out;
 }
 
 /* node_modules/@radix-ui/themes/styles.css */
