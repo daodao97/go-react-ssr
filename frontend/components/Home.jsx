@@ -4,6 +4,7 @@ import Hero from "../blocks/hero/Hero";
 import { getTranslations } from "../lib/i18n";
 import { GenVideo } from "../blocks/submit/GenVideo";
 import { Feature1 } from '../blocks/feature/Feature1';
+import { Feature2 } from '../blocks/feature/Feature2';
 import { FiBox, FiSettings, FiCloud } from 'react-icons/fi'; // 需要安装 react-icons
 
 /**
@@ -80,6 +81,37 @@ export function Home({ message = "", initialCount = 0 }) {
 		}
 	]
 
+	const feature2Props = [
+		{
+			title: "Go React SSR 特性",
+			description: "Go React SSR 提供多种特性，帮助您快速构建 AI SaaS 应用。",
+			features: [
+				{
+					icon: <FiBox size={24} />,
+					title: "即用型模板",
+					description: "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
+					imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+					imageAlt: "Go React SSR 代码预览"
+				},
+				{
+					icon: <FiBox size={24} />,
+					title: "即用型模板",
+					description: "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
+					imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+					imageAlt: "Go React SSR 代码预览"
+				},
+				{
+					icon: <FiBox size={24} />,
+					title: "即用型模板",
+					description: "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
+					imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+					imageAlt: "Go React SSR 代码预览"
+				},
+
+			]
+		}
+	]
+
 	return (
 		<div className="flex-1 flex-col bg-gray-900">
 			<Hero hero={hero} />
@@ -87,6 +119,14 @@ export function Home({ message = "", initialCount = 0 }) {
 
 			{featureProps.map((feature, index) => (
 				<Feature1
+					key={index}
+					{...feature}
+					isReversed={index % 2 === 1}
+				/>
+			))}
+
+			{feature2Props.map((feature, index) => (
+				<Feature2
 					key={index}
 					{...feature}
 					isReversed={index % 2 === 1}

@@ -10,7 +10,7 @@ import {
 } from "../chunk-U67V476Y.js";
 
 // frontend/components/Home.jsx
-var import_react5 = __toESM(require_react());
+var import_react6 = __toESM(require_react());
 
 // frontend/blocks/faq/Faq.tsx
 var import_react = __toESM(require_react());
@@ -3038,6 +3038,119 @@ var Feature1 = ({
   ))), /* @__PURE__ */ import_react4.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react4.default.createElement("h2", { className: "text-3xl font-bold mb-4" }, title), /* @__PURE__ */ import_react4.default.createElement("p", { className: "text-gray-600 mb-8" }, description), features.length > 0 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "space-y-6" }, features.map((feature, index) => /* @__PURE__ */ import_react4.default.createElement("div", { key: index, className: "flex items-start gap-4" }, /* @__PURE__ */ import_react4.default.createElement("div", { className: "flex-shrink-0 text-primary" }, feature.icon), /* @__PURE__ */ import_react4.default.createElement("div", null, /* @__PURE__ */ import_react4.default.createElement("h3", { className: "font-semibold text-lg" }, feature.title), /* @__PURE__ */ import_react4.default.createElement("p", { className: "text-gray-500" }, feature.description)))))))));
 };
 
+// frontend/blocks/feature/Feature2.tsx
+var import_react5 = __toESM(require_react());
+var Feature2 = ({
+  title,
+  description,
+  isReversed = false,
+  features = [],
+  autoplay = true,
+  // 默认启用自动轮播
+  interval = 5e3
+  // 默认5秒切换一次
+}) => {
+  const [activeFeatureIndex, setActiveFeatureIndex] = (0, import_react5.useState)(0);
+  const [prevFeatureIndex, setPrevFeatureIndex] = (0, import_react5.useState)(0);
+  const [isTransitioning, setIsTransitioning] = (0, import_react5.useState)(false);
+  const autoplayTimerRef = (0, import_react5.useRef)(null);
+  const currentImageUrl = features.length > 0 ? features[activeFeatureIndex].imageUrl : "";
+  const currentImageAlt = features.length > 0 ? features[activeFeatureIndex].imageAlt || "\u7279\u6027\u5C55\u793A" : "\u7279\u6027\u5C55\u793A";
+  const handleFeatureChange = (index) => {
+    if (index !== activeFeatureIndex && !isTransitioning) {
+      setPrevFeatureIndex(activeFeatureIndex);
+      setIsTransitioning(true);
+      setActiveFeatureIndex(index);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    }
+  };
+  const resetAutoplayTimer = () => {
+    if (autoplayTimerRef.current !== null) {
+      window.clearInterval(autoplayTimerRef.current);
+      autoplayTimerRef.current = null;
+    }
+    if (autoplay && features.length > 1) {
+      autoplayTimerRef.current = window.setInterval(() => {
+        setActiveFeatureIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % features.length;
+          setPrevFeatureIndex(prevIndex);
+          setIsTransitioning(true);
+          setTimeout(() => {
+            setIsTransitioning(false);
+          }, 500);
+          return nextIndex;
+        });
+      }, interval);
+    }
+  };
+  (0, import_react5.useEffect)(() => {
+    resetAutoplayTimer();
+    return () => {
+      if (autoplayTimerRef.current !== null) {
+        window.clearInterval(autoplayTimerRef.current);
+        autoplayTimerRef.current = null;
+      }
+    };
+  }, [autoplay, features.length, interval]);
+  const handleFeatureClick = (index) => {
+    if (isTransitioning || index === activeFeatureIndex) return;
+    handleFeatureChange(index);
+    resetAutoplayTimer();
+  };
+  const getSlideDirection = () => {
+    if (activeFeatureIndex === prevFeatureIndex) return "";
+    if (prevFeatureIndex === features.length - 1 && activeFeatureIndex === 0) {
+      return "slide-right";
+    }
+    if (prevFeatureIndex === 0 && activeFeatureIndex === features.length - 1) {
+      return "slide-left";
+    }
+    return activeFeatureIndex > prevFeatureIndex ? "slide-right" : "slide-left";
+  };
+  return /* @__PURE__ */ import_react5.default.createElement("div", { className: "py-16" }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "container mx-auto px-4" }, /* @__PURE__ */ import_react5.default.createElement("div", { className: `flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-12` }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "relative rounded-lg overflow-hidden shadow-lg h-[400px]" }, /* @__PURE__ */ import_react5.default.createElement("div", { className: "absolute inset-0 w-full h-full" }, features.map((feature, index) => /* @__PURE__ */ import_react5.default.createElement(
+    "div",
+    {
+      key: index,
+      className: `absolute inset-0 w-full h-full transition-all duration-500 ease-in-out
+                                            ${index === activeFeatureIndex ? "opacity-100 z-10" : "opacity-0 z-0"}
+                                            ${index === activeFeatureIndex && isTransitioning ? getSlideDirection() : ""}
+                                        `
+    },
+    /* @__PURE__ */ import_react5.default.createElement(
+      "img",
+      {
+        src: feature.imageUrl,
+        alt: feature.imageAlt || "\u7279\u6027\u5C55\u793A",
+        className: "w-full h-full object-cover",
+        onError: (e2) => {
+          e2.currentTarget.onerror = null;
+          e2.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%236b7280'%3E\u56FE\u7247\u52A0\u8F7D\u5931\u8D25%3C/text%3E%3C/svg%3E";
+        }
+      }
+    )
+  ))), features.length > 1 && /* @__PURE__ */ import_react5.default.createElement("div", { className: "absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20" }, features.map((_, index) => /* @__PURE__ */ import_react5.default.createElement(
+    "button",
+    {
+      key: index,
+      className: `w-2 h-2 rounded-full transition-all ${activeFeatureIndex === index ? "bg-white w-4" : "bg-white/50"}`,
+      onClick: () => handleFeatureClick(index),
+      "aria-label": `\u67E5\u770B\u7279\u6027 ${index + 1}`,
+      disabled: isTransitioning
+    }
+  ))))), /* @__PURE__ */ import_react5.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react5.default.createElement("h2", { className: "text-3xl font-bold mb-4" }, title), /* @__PURE__ */ import_react5.default.createElement("p", { className: "text-gray-600 mb-8" }, description), features.length > 0 && /* @__PURE__ */ import_react5.default.createElement("div", { className: "space-y-6" }, features.map((feature, index) => /* @__PURE__ */ import_react5.default.createElement(
+    "div",
+    {
+      key: index,
+      className: `flex items-start gap-4 p-3 rounded-lg cursor-pointer transition-colors duration-200 ${activeFeatureIndex === index ? "bg-gray-800 text-white" : "hover:bg-gray-700 hover:text-gray-100"}`,
+      onClick: () => handleFeatureClick(index)
+    },
+    /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex-shrink-0 text-primary" }, feature.icon),
+    /* @__PURE__ */ import_react5.default.createElement("div", null, /* @__PURE__ */ import_react5.default.createElement("h3", { className: "font-semibold text-lg" }, feature.title), /* @__PURE__ */ import_react5.default.createElement("p", { className: `${activeFeatureIndex === index ? "text-gray-300" : "text-gray-500"}` }, feature.description))
+  )))))));
+};
+
 // node_modules/react-icons/fi/index.mjs
 function FiBox(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "path", "attr": { "d": "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }, "child": [] }, { "tag": "polyline", "attr": { "points": "3.27 6.96 12 12.01 20.73 6.96" }, "child": [] }, { "tag": "line", "attr": { "x1": "12", "y1": "22.08", "x2": "12", "y2": "12" }, "child": [] }] })(props);
@@ -3051,13 +3164,13 @@ function FiSettings(props) {
 
 // frontend/components/Home.jsx
 function Home({ message = "", initialCount = 0 }) {
-  const [count, setCount] = (0, import_react5.useState)(initialCount);
-  const [currentMessage, setCurrentMessage] = (0, import_react5.useState)(message);
-  const increment = (0, import_react5.useCallback)(() => setCount(count + 1), [count]);
-  const decrement = (0, import_react5.useCallback)(() => setCount(count - 1), [count]);
+  const [count, setCount] = (0, import_react6.useState)(initialCount);
+  const [currentMessage, setCurrentMessage] = (0, import_react6.useState)(message);
+  const increment = (0, import_react6.useCallback)(() => setCount(count + 1), [count]);
+  const decrement = (0, import_react6.useCallback)(() => setCount(count - 1), [count]);
   const faqs = getTranslations("home.faq", {});
   const hero = getTranslations("home.hero", {});
-  (0, import_react5.useEffect)(() => {
+  (0, import_react6.useEffect)(() => {
     setTimeout(() => {
       setCurrentMessage("Message updated after first render");
     }, 1e3);
@@ -3070,17 +3183,17 @@ function Home({ message = "", initialCount = 0 }) {
       imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
       features: [
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiBox, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiBox, { size: 24 }),
           title: "\u5373\u7528\u578B\u6A21\u677F",
           description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiSettings, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiSettings, { size: 24 }),
           title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
           description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiCloud, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiCloud, { size: 24 }),
           title: "\u5FEB\u901F\u90E8\u7F72",
           description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
         }
@@ -3093,31 +3206,67 @@ function Home({ message = "", initialCount = 0 }) {
       imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
       features: [
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiBox, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiBox, { size: 24 }),
           title: "\u5373\u7528\u578B\u6A21\u677F",
           description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiSettings, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiSettings, { size: 24 }),
           title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
           description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react5.default.createElement(FiCloud, { size: 24 }),
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiCloud, { size: 24 }),
           title: "\u5FEB\u901F\u90E8\u7F72",
           description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
         }
       ]
     }
   ];
-  return /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react5.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react5.default.createElement(GenVideo, null), featureProps.map((feature, index) => /* @__PURE__ */ import_react5.default.createElement(
+  const feature2Props = [
+    {
+      title: "Go React SSR \u7279\u6027",
+      description: "Go React SSR \u63D0\u4F9B\u591A\u79CD\u7279\u6027\uFF0C\u5E2E\u52A9\u60A8\u5FEB\u901F\u6784\u5EFA AI SaaS \u5E94\u7528\u3002",
+      features: [
+        {
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        },
+        {
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        },
+        {
+          icon: /* @__PURE__ */ import_react6.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        }
+      ]
+    }
+  ];
+  return /* @__PURE__ */ import_react6.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react6.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react6.default.createElement(GenVideo, null), featureProps.map((feature, index) => /* @__PURE__ */ import_react6.default.createElement(
     Feature1,
     {
       key: index,
       ...feature,
       isReversed: index % 2 === 1
     }
-  )), /* @__PURE__ */ import_react5.default.createElement(Faq, { faqs }));
+  )), feature2Props.map((feature, index) => /* @__PURE__ */ import_react6.default.createElement(
+    Feature2,
+    {
+      key: index,
+      ...feature,
+      isReversed: index % 2 === 1
+    }
+  )), /* @__PURE__ */ import_react6.default.createElement(Faq, { faqs }));
 }
 
 // frontend/app/Home.jsx

@@ -1197,7 +1197,7 @@ var require_react_dom_development = __commonJS({
         return dispatcher;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React48 = require_react(), Internals = {
+      var React49 = require_react(), Internals = {
         d: {
           f: noop,
           r: function() {
@@ -1215,7 +1215,7 @@ var require_react_dom_development = __commonJS({
         },
         p: 0,
         findDOMNode: null
-      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React49.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
         "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
       );
@@ -2357,7 +2357,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React48.Children.forEach(children, function(child) {
+        React49.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -6592,7 +6592,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
           );
         return result;
       }
-      var React48 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
+      var React49 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), assign = Object.assign, hasOwnProperty5 = Object.prototype.hasOwnProperty, VALID_ATTRIBUTE_NAME_REGEX = RegExp(
         "^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), illegalAttributeNameCache = {}, validatedAttributeNameCache = {}, unitlessNumbers = new Set(
         "animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp".split(
@@ -7236,7 +7236,7 @@ var require_react_dom_server_legacy_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React49.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -8783,7 +8783,7 @@ var require_react_dom_server_browser_development = __commonJS({
       }
       function flattenOptionChildren(children) {
         var content = "";
-        React48.Children.forEach(children, function(child) {
+        React49.Children.forEach(children, function(child) {
           null != child && (content += child, didWarnInvalidOptionChildren || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || (didWarnInvalidOptionChildren = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           )));
@@ -12946,13 +12946,13 @@ var require_react_dom_server_browser_development = __commonJS({
         }
       }
       function ensureCorrectIsomorphicReactVersion() {
-        var isomorphicReactPackageVersion = React48.version;
+        var isomorphicReactPackageVersion = React49.version;
         if ("19.0.0" !== isomorphicReactPackageVersion)
           throw Error(
             'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.0.0\nLearn more: https://react.dev/warnings/version-mismatch")
           );
       }
-      var React48 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
+      var React49 = require_react(), ReactDOM4 = require_react_dom(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_PROVIDER_TYPE = Symbol.for("react.provider"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_SCOPE_TYPE = Symbol.for("react.scope"), REACT_DEBUG_TRACING_MODE_TYPE = Symbol.for("react.debug_trace_mode"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), REACT_LEGACY_HIDDEN_TYPE = Symbol.for("react.legacy_hidden"), REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, isArrayImpl = Array.isArray, jsxPropsParents = /* @__PURE__ */ new WeakMap(), jsxChildrenParents = /* @__PURE__ */ new WeakMap(), CLIENT_REFERENCE_TAG = Symbol.for("react.client.reference"), channel = new MessageChannel(), taskQueue = [];
       channel.port1.onmessage = function() {
         var task = taskQueue.shift();
         task && task();
@@ -13603,7 +13603,7 @@ var require_react_dom_server_browser_development = __commonJS({
         "^(aria)-[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
       ), rARIACamel = RegExp(
         "^(aria)[A-Z][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$"
-      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      ), badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/, msPattern$1 = /^-ms-/, hyphenPattern = /-(.)/g, badStyleValueWithSemicolonPattern = /;\s*$/, warnedStyleNames = {}, warnedStyleValues = {}, warnedForNaNValue = false, warnedForInfinityValue = false, matchHtmlRegExp = /["'&<>]/, uppercasePattern = /([A-Z])/g, msPattern = /^ms-/, isJavaScriptProtocol = /^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i, ReactSharedInternals = React49.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM4.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -14601,9 +14601,9 @@ var require_react_jsx_runtime_development = __commonJS({
         info || (parentType = getComponentNameFromType(parentType)) && (info = "\n\nCheck the top-level render call using <" + parentType + ">.");
         return info;
       }
-      var React48 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+      var React49 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler");
       Symbol.for("react.provider");
-      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React48.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
+      var REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen"), MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE$2 = Symbol.for("react.client.reference"), ReactSharedInternals = React49.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty5 = Object.prototype.hasOwnProperty, assign = Object.assign, REACT_CLIENT_REFERENCE$1 = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, disabledDepth = 0, prevLog, prevInfo, prevWarn, prevError, prevGroup, prevGroupCollapsed, prevGroupEnd;
       disabledLog.__reactDisabledLog = true;
       var prefix, suffix, reentry = false;
       var componentFrameCache = new ("function" === typeof WeakMap ? WeakMap : Map)();
@@ -23348,7 +23348,7 @@ function createServerRenderer({ Component, transformProps }) {
 }
 
 // frontend/components/Home.jsx
-var import_react17 = __toESM(require_react());
+var import_react18 = __toESM(require_react());
 
 // frontend/blocks/faq/Faq.tsx
 var import_react13 = __toESM(require_react());
@@ -26376,6 +26376,119 @@ var Feature1 = ({
   ))), /* @__PURE__ */ import_react16.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react16.default.createElement("h2", { className: "text-3xl font-bold mb-4" }, title), /* @__PURE__ */ import_react16.default.createElement("p", { className: "text-gray-600 mb-8" }, description), features.length > 0 && /* @__PURE__ */ import_react16.default.createElement("div", { className: "space-y-6" }, features.map((feature, index2) => /* @__PURE__ */ import_react16.default.createElement("div", { key: index2, className: "flex items-start gap-4" }, /* @__PURE__ */ import_react16.default.createElement("div", { className: "flex-shrink-0 text-primary" }, feature.icon), /* @__PURE__ */ import_react16.default.createElement("div", null, /* @__PURE__ */ import_react16.default.createElement("h3", { className: "font-semibold text-lg" }, feature.title), /* @__PURE__ */ import_react16.default.createElement("p", { className: "text-gray-500" }, feature.description)))))))));
 };
 
+// frontend/blocks/feature/Feature2.tsx
+var import_react17 = __toESM(require_react());
+var Feature2 = ({
+  title,
+  description,
+  isReversed = false,
+  features = [],
+  autoplay = true,
+  // 默认启用自动轮播
+  interval = 5e3
+  // 默认5秒切换一次
+}) => {
+  const [activeFeatureIndex, setActiveFeatureIndex] = (0, import_react17.useState)(0);
+  const [prevFeatureIndex, setPrevFeatureIndex] = (0, import_react17.useState)(0);
+  const [isTransitioning, setIsTransitioning] = (0, import_react17.useState)(false);
+  const autoplayTimerRef = (0, import_react17.useRef)(null);
+  const currentImageUrl = features.length > 0 ? features[activeFeatureIndex].imageUrl : "";
+  const currentImageAlt = features.length > 0 ? features[activeFeatureIndex].imageAlt || "\u7279\u6027\u5C55\u793A" : "\u7279\u6027\u5C55\u793A";
+  const handleFeatureChange = (index2) => {
+    if (index2 !== activeFeatureIndex && !isTransitioning) {
+      setPrevFeatureIndex(activeFeatureIndex);
+      setIsTransitioning(true);
+      setActiveFeatureIndex(index2);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500);
+    }
+  };
+  const resetAutoplayTimer = () => {
+    if (autoplayTimerRef.current !== null) {
+      window.clearInterval(autoplayTimerRef.current);
+      autoplayTimerRef.current = null;
+    }
+    if (autoplay && features.length > 1) {
+      autoplayTimerRef.current = window.setInterval(() => {
+        setActiveFeatureIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % features.length;
+          setPrevFeatureIndex(prevIndex);
+          setIsTransitioning(true);
+          setTimeout(() => {
+            setIsTransitioning(false);
+          }, 500);
+          return nextIndex;
+        });
+      }, interval);
+    }
+  };
+  (0, import_react17.useEffect)(() => {
+    resetAutoplayTimer();
+    return () => {
+      if (autoplayTimerRef.current !== null) {
+        window.clearInterval(autoplayTimerRef.current);
+        autoplayTimerRef.current = null;
+      }
+    };
+  }, [autoplay, features.length, interval]);
+  const handleFeatureClick = (index2) => {
+    if (isTransitioning || index2 === activeFeatureIndex) return;
+    handleFeatureChange(index2);
+    resetAutoplayTimer();
+  };
+  const getSlideDirection = () => {
+    if (activeFeatureIndex === prevFeatureIndex) return "";
+    if (prevFeatureIndex === features.length - 1 && activeFeatureIndex === 0) {
+      return "slide-right";
+    }
+    if (prevFeatureIndex === 0 && activeFeatureIndex === features.length - 1) {
+      return "slide-left";
+    }
+    return activeFeatureIndex > prevFeatureIndex ? "slide-right" : "slide-left";
+  };
+  return /* @__PURE__ */ import_react17.default.createElement("div", { className: "py-16" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "container mx-auto px-4" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: `flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-12` }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "relative rounded-lg overflow-hidden shadow-lg h-[400px]" }, /* @__PURE__ */ import_react17.default.createElement("div", { className: "absolute inset-0 w-full h-full" }, features.map((feature, index2) => /* @__PURE__ */ import_react17.default.createElement(
+    "div",
+    {
+      key: index2,
+      className: `absolute inset-0 w-full h-full transition-all duration-500 ease-in-out
+                                            ${index2 === activeFeatureIndex ? "opacity-100 z-10" : "opacity-0 z-0"}
+                                            ${index2 === activeFeatureIndex && isTransitioning ? getSlideDirection() : ""}
+                                        `
+    },
+    /* @__PURE__ */ import_react17.default.createElement(
+      "img",
+      {
+        src: feature.imageUrl,
+        alt: feature.imageAlt || "\u7279\u6027\u5C55\u793A",
+        className: "w-full h-full object-cover",
+        onError: (e15) => {
+          e15.currentTarget.onerror = null;
+          e15.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%236b7280'%3E\u56FE\u7247\u52A0\u8F7D\u5931\u8D25%3C/text%3E%3C/svg%3E";
+        }
+      }
+    )
+  ))), features.length > 1 && /* @__PURE__ */ import_react17.default.createElement("div", { className: "absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20" }, features.map((_, index2) => /* @__PURE__ */ import_react17.default.createElement(
+    "button",
+    {
+      key: index2,
+      className: `w-2 h-2 rounded-full transition-all ${activeFeatureIndex === index2 ? "bg-white w-4" : "bg-white/50"}`,
+      onClick: () => handleFeatureClick(index2),
+      "aria-label": `\u67E5\u770B\u7279\u6027 ${index2 + 1}`,
+      disabled: isTransitioning
+    }
+  ))))), /* @__PURE__ */ import_react17.default.createElement("div", { className: "w-full md:w-1/2" }, /* @__PURE__ */ import_react17.default.createElement("h2", { className: "text-3xl font-bold mb-4" }, title), /* @__PURE__ */ import_react17.default.createElement("p", { className: "text-gray-600 mb-8" }, description), features.length > 0 && /* @__PURE__ */ import_react17.default.createElement("div", { className: "space-y-6" }, features.map((feature, index2) => /* @__PURE__ */ import_react17.default.createElement(
+    "div",
+    {
+      key: index2,
+      className: `flex items-start gap-4 p-3 rounded-lg cursor-pointer transition-colors duration-200 ${activeFeatureIndex === index2 ? "bg-gray-800 text-white" : "hover:bg-gray-700 hover:text-gray-100"}`,
+      onClick: () => handleFeatureClick(index2)
+    },
+    /* @__PURE__ */ import_react17.default.createElement("div", { className: "flex-shrink-0 text-primary" }, feature.icon),
+    /* @__PURE__ */ import_react17.default.createElement("div", null, /* @__PURE__ */ import_react17.default.createElement("h3", { className: "font-semibold text-lg" }, feature.title), /* @__PURE__ */ import_react17.default.createElement("p", { className: `${activeFeatureIndex === index2 ? "text-gray-300" : "text-gray-500"}` }, feature.description))
+  )))))));
+};
+
 // node_modules/react-icons/fi/index.mjs
 function FiBox(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "none", "stroke": "currentColor", "strokeWidth": "2", "strokeLinecap": "round", "strokeLinejoin": "round" }, "child": [{ "tag": "path", "attr": { "d": "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }, "child": [] }, { "tag": "polyline", "attr": { "points": "3.27 6.96 12 12.01 20.73 6.96" }, "child": [] }, { "tag": "line", "attr": { "x1": "12", "y1": "22.08", "x2": "12", "y2": "12" }, "child": [] }] })(props);
@@ -26389,13 +26502,13 @@ function FiSettings(props) {
 
 // frontend/components/Home.jsx
 function Home({ message = "", initialCount = 0 }) {
-  const [count3, setCount] = (0, import_react17.useState)(initialCount);
-  const [currentMessage, setCurrentMessage] = (0, import_react17.useState)(message);
-  const increment = (0, import_react17.useCallback)(() => setCount(count3 + 1), [count3]);
-  const decrement = (0, import_react17.useCallback)(() => setCount(count3 - 1), [count3]);
+  const [count3, setCount] = (0, import_react18.useState)(initialCount);
+  const [currentMessage, setCurrentMessage] = (0, import_react18.useState)(message);
+  const increment = (0, import_react18.useCallback)(() => setCount(count3 + 1), [count3]);
+  const decrement = (0, import_react18.useCallback)(() => setCount(count3 - 1), [count3]);
   const faqs = getTranslations("home.faq", {});
   const hero = getTranslations("home.hero", {});
-  (0, import_react17.useEffect)(() => {
+  (0, import_react18.useEffect)(() => {
     setTimeout(() => {
       setCurrentMessage("Message updated after first render");
     }, 1e3);
@@ -26408,17 +26521,17 @@ function Home({ message = "", initialCount = 0 }) {
       imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
       features: [
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiBox, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiBox, { size: 24 }),
           title: "\u5373\u7528\u578B\u6A21\u677F",
           description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiSettings, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiSettings, { size: 24 }),
           title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
           description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiCloud, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiCloud, { size: 24 }),
           title: "\u5FEB\u901F\u90E8\u7F72",
           description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
         }
@@ -26431,31 +26544,67 @@ function Home({ message = "", initialCount = 0 }) {
       imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8",
       features: [
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiBox, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiBox, { size: 24 }),
           title: "\u5373\u7528\u578B\u6A21\u677F",
           description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiSettings, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiSettings, { size: 24 }),
           title: "\u57FA\u7840\u8BBE\u65BD\u914D\u7F6E",
           description: "\u7ACB\u5373\u83B7\u53D6\u5185\u7F6E\u6700\u4F73\u5B9E\u8DF5\u7684\u53EF\u6269\u5C55\u57FA\u7840\u8BBE\u65BD\u3002"
         },
         {
-          icon: /* @__PURE__ */ import_react17.default.createElement(FiCloud, { size: 24 }),
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiCloud, { size: 24 }),
           title: "\u5FEB\u901F\u90E8\u7F72",
           description: "\u5728\u51E0\u5C0F\u65F6\u5185\u5C06\u60A8\u7684 AI SaaS \u5E94\u7528\u90E8\u7F72\u5230\u751F\u4EA7\u73AF\u5883\uFF0C\u800C\u4E0D\u662F\u51E0\u5929\u3002"
         }
       ]
     }
   ];
-  return /* @__PURE__ */ import_react17.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react17.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react17.default.createElement(GenVideo, null), featureProps.map((feature, index2) => /* @__PURE__ */ import_react17.default.createElement(
+  const feature2Props = [
+    {
+      title: "Go React SSR \u7279\u6027",
+      description: "Go React SSR \u63D0\u4F9B\u591A\u79CD\u7279\u6027\uFF0C\u5E2E\u52A9\u60A8\u5FEB\u901F\u6784\u5EFA AI SaaS \u5E94\u7528\u3002",
+      features: [
+        {
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        },
+        {
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        },
+        {
+          icon: /* @__PURE__ */ import_react18.default.createElement(FiBox, { size: 24 }),
+          title: "\u5373\u7528\u578B\u6A21\u677F",
+          description: "\u4ECE\u6570\u5341\u4E2A\u751F\u4EA7\u5C31\u7EEA\u7684 AI SaaS \u6A21\u677F\u4E2D\u9009\u62E9\uFF0C\u5FEB\u901F\u542F\u52A8\u60A8\u7684\u9879\u76EE\u3002",
+          imageUrl: "https://plus.unsplash.com/premium_photo-1670426500778-80d177da0973?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4cGZvUFQ4S0VNY3x8ZW58MHx8fHx8",
+          imageAlt: "Go React SSR \u4EE3\u7801\u9884\u89C8"
+        }
+      ]
+    }
+  ];
+  return /* @__PURE__ */ import_react18.default.createElement("div", { className: "flex-1 flex-col bg-gray-900" }, /* @__PURE__ */ import_react18.default.createElement(Hero, { hero }), /* @__PURE__ */ import_react18.default.createElement(GenVideo, null), featureProps.map((feature, index2) => /* @__PURE__ */ import_react18.default.createElement(
     Feature1,
     {
       key: index2,
       ...feature,
       isReversed: index2 % 2 === 1
     }
-  )), /* @__PURE__ */ import_react17.default.createElement(Faq, { faqs }));
+  )), feature2Props.map((feature, index2) => /* @__PURE__ */ import_react18.default.createElement(
+    Feature2,
+    {
+      key: index2,
+      ...feature,
+      isReversed: index2 % 2 === 1
+    }
+  )), /* @__PURE__ */ import_react18.default.createElement(Faq, { faqs }));
 }
 
 // frontend/server/Home.jsx
