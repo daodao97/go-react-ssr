@@ -115,6 +115,7 @@ export function Home({ message = "", initialCount = 0 }) {
 	return (
 		<div className="flex-1 flex-col bg-gray-900">
 			<Hero hero={hero} />
+
 			<GenVideo />
 
 			{featureProps.map((feature, index) => (
